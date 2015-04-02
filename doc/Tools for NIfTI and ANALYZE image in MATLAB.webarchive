@@ -1,0 +1,1345 @@
+bplist00Ò_WebMainResource_WebSubresourcesÕ	
+_WebResourceFrameName_WebResourceTextEncodingName_WebResourceData_WebResourceMIMEType^WebResourceURLPUUTF-8O¶<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 9">
+<meta name="Originator" content="Microsoft Word 9">
+<link rel="File-List" href="./updateme_NIFTI_files/filelist.xml">
+<link rel="Edit-Time-Data" href="./updateme_NIFTI_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Tools for NIfTI and ANALYZE image in MATLAB</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>jimmy</o:Author>
+  <o:LastAuthor>jimmy</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>622</o:TotalTime>
+  <o:Created>2011-05-06T19:19:00Z</o:Created>
+  <o:LastSaved>2011-05-06T19:19:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1320</o:Words>
+  <o:Characters>7526</o:Characters>
+  <o:Company>rri</o:Company>
+  <o:Lines>62</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>9242</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:16.0pt;
+	font-weight:bold;}
+h2
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Arial Unicode MS";
+	font-weight:bold;}
+h3
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Arial Unicode MS";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:52196672;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-839984630 -1220492590 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:12.0pt;
+	font-family:Symbol;
+	color:windowtext;}
+@list l1
+	{mso-list-id:98721127;
+	mso-list-type:hybrid;
+	mso-list-template-ids:241607916 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:233667848;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-211938502 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:386806971;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l4
+	{mso-list-id:440611635;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-217515602 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:443035175;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l6
+	{mso-list-id:561984535;
+	mso-list-type:hybrid;
+	mso-list-template-ids:305532766 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l6:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:712727440;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-839984630 67698691 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l8
+	{mso-list-id:830826894;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-211938502 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l8:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l8:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9
+	{mso-list-id:887452230;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-211938502 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l9:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l9:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:904950053;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l11
+	{mso-list-id:973870695;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-211938502 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l11:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l11:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l11:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12
+	{mso-list-id:998114623;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l13
+	{mso-list-id:1004674145;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l13:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l13:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l14
+	{mso-list-id:1120488138;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-453073574 17056372 -1141243324 1629528978 -1246706482 -1798423442 -913438692 -1894489096 -1228759604 496925344;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l14:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l15
+	{mso-list-id:1558080500;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1987986266 1449441500 -2005483982 82348026 -240332110 -2095143270 377673632 -1398252848 1543956586 -863736934;}
+@list l15:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l16
+	{mso-list-id:1599213147;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l16:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l16:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l17
+	{mso-list-id:1612784599;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l17:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l17:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l18
+	{mso-list-id:1614241527;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-659665730 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l18:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l19
+	{mso-list-id:1868909840;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l19:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l19:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l20
+	{mso-list-id:2054579880;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-211938502 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l20:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l21
+	{mso-list-id:2116824124;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235235880 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l21:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l21:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l22
+	{mso-list-id:2133090848;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-211938502 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l22:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l22:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l22:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l22:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+
+
+<script language="javascript">
+<!-- //
+function dl_matlab_nifti()
+{
+ window.location.href="http://www.mathworks.com/matlabcentral/fileexchange/8797?controller=file_infos&download=true";
+}
+// -->
+</script>
+
+
+</head><body lang="EN-US" link="blue" vlink="purple" style="tab-interval:.5in">
+
+<div class="Section1">
+
+<h1 align="center" style="text-align:center"><span style="font-size:18.0pt;
+mso-bidi-font-size:16.0pt;font-family:&quot;Times New Roman&quot;">Tools for NIfTI and
+ANALYZE image in MATLAB<o:p></o:p></span></h1>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-size:14.0pt;mso-bidi-font-size:12.0pt">(Click <b><a href="#update">LINK
+HERE</a></b> for the latest update)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center">&nbsp;<o:p></o:p></p>
+
+
+<div class="MsoNormal" align="center" style="text-align:center">
+
+<hr size="2" width="100%" align="center">
+
+</div>
+
+
+<br><center><form name="dnlForm" onsubmit="dl_matlab_nifti(); return false">
+<input type="submit" value="Download Now">
+</form></center>
+
+
+<h3><span style="font-size:14.0pt;mso-bidi-font-size:13.5pt;font-family:&quot;Times New Roman&quot;">Description:<o:p></o:p></span></h3>
+
+<p class="MsoNormal">Frequently Asked Questions:<span style="mso-spacerun: yes">&nbsp;
+</span><a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/FAQ.htm">http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/FAQ.htm</a></p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ul style="margin-top:0in" type="circle">
+ <li class="MsoNormal" style="mso-list:l7 level1 lfo23;tab-stops:list .5in">If
+     you are confused by the Left side / Right side of an ANALYZE image, the
+     following link may help you:<br> <a href="http://www.rotman-baycrest.on.ca/~jimmy/UseANALYZE.htm">http://www.rotman-baycrest.on.ca/~jimmy/UseANALYZE.htm</a></li>
+</ul>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ul style="margin-top:0in" type="circle">
+ <li class="MsoNormal" style="mso-list:l7 level1 lfo23;tab-stops:list .5in">Feature
+     of <b>load_untouch_header_only</b>:<span style="mso-spacerun: yes">&nbsp;
+     </span>It will load exactly whatever stored in the header section of NIfTI
+     or ANALYZE data, and automatically detected the input file format. NIfTI
+     structure will be returned for NIfTI file, and ANALYZE structure will be returned
+     for ANALYZE file.</li>
+</ul>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ul style="margin-top:0in" type="circle">
+ <li class="MsoNormal" style="mso-list:l7 level1 lfo23;tab-stops:list .5in">Feature
+     of <b>load_nii</b>:<span style="mso-spacerun: yes">&nbsp; </span>It not only
+     loads the file, but also transforms the affine matrix to a diagonal matrix
+     with positive entries and re-orients the image matrix in the loaded
+     structure correspondingly. This feature makes it different from other
+     software, and it is proven to be a convenient way to tell the orientation
+     immediately, especially in the Left / Right confusion. For NIfTI data with
+     both non-zero sform_code and qform_code, load_nii even allows you to pick
+     your preferred form, also sform_code is picked by default.</li>
+</ul>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ul style="margin-top:0in" type="circle">
+ <li class="MsoNormal" style="mso-list:l7 level1 lfo23;tab-stops:list .5in">Feature
+     of <b>view_nii</b>:<span style="mso-spacerun: yes">&nbsp; </span>It can display
+     the background image, as well as the overlay activation map and ROI etc.
+     If you use this function in your application, the display can be embedded
+     into your existing figure window. If you use it as an individual program,
+     it can also edit the orientation and voxel value of the image, and save
+     the modified image. See detail at:<br> <a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/examples.txt">http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/examples.txt</a>.</li>
+</ul>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ul style="margin-top:0in" type="circle">
+ <li class="MsoNormal" style="mso-list:l7 level1 lfo23;tab-stops:list .5in">Feature
+     of <b>reslice_nii</b>:<span style="mso-spacerun: yes">&nbsp; </span>It can
+     interpolate any oblique images with non-orthogonal rotation or shearing
+     and save them into orthogonal orientations that can be loaded with
+     load_nii.</li>
+</ul>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ul style="margin-top:0in" type="circle">
+ <li class="MsoNormal" style="mso-list:l7 level1 lfo23;tab-stops:list .5in">Feature
+     of <b>save_nii</b>:<span style="mso-spacerun: yes">&nbsp; </span>It can save
+     any NIfTI data into ANALIZE compatible file extension (.img/.hdr), and can
+     be used by other software that does not support NIfTI file format.</li>
+</ul>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal">Basic Programs:</p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="1" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>load_untouch_header_only.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Load only the header section of NIfTI
+     or ANALYZE data. The input file will be automatically detected. NIfTI
+     structure will be returned for NIfTI file, and ANALYZE structure will be
+     returned for ANALYZE file.&nbsp; For usage, type:&nbsp; help
+     load_untouch_header_only</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="2" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>load_nii.m</b>:&nbsp;
+     Load N-Dimensional NIfTI data (where N can be from 3 to 7)<b> </b>or
+     ANALYZE data (where N can be from 3 to 4), and apply header info (e.g.
+     affine geometric transform, voxel intensity scaling, etc.) to the data. If
+     your data has more than 3-Dimension (e.g. time series etc.), you can also
+     specify a range to extract only 1 or several volumes.&nbsp; For usage,
+     type:&nbsp; help load_nii</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="3" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>save_nii.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Save N-Dimensional NIfTI data (where N
+     can be from 3 to 7) that is loaded by "load_nii.m" or made by
+     "make_nii.m".<span style="mso-spacerun: yes">&nbsp; </span>For usage,
+     type:<span style="mso-spacerun: yes">&nbsp; </span>help save_nii</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="4" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>make_nii.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Make N-Dimensional NIfTI data (where N
+     can be from 3 to 7) based on the N-Dimensional matrix and other optional
+     parameters (e.g. voxel_size, origin, etc.). Using "save_nii"
+     command, the NIfTI data that is made by "make_nii" can be saved
+     into a NIfTI file.<span style="mso-spacerun: yes">&nbsp; </span>For usage,
+     type:<span style="mso-spacerun: yes">&nbsp; </span>help make_nii</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="5" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>make_ana.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Make 3D ANALYZE data based on the 3D
+     matrix and other optional parameters (e.g. voxel_size, origin, etc.).
+     Using "save_untouch_nii" command, the ANALYZE data that is made
+     by "make_ana" can be saved into an ANALYZE file in order to be
+     compatible with some ANALYZE only programs.<span style="mso-spacerun:
+     yes">&nbsp; </span>For usage, type:<span style="mso-spacerun: yes">&nbsp;
+     </span>help make_ana</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="6" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>reslice_nii.m</b>:
+
+
+<table align="right">
+<tbody><tr>
+<td width="80%" align="center">
+<a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/NIFTI.jpg" onclick="window.open(this.href,'small','toolbar=no,resizable=yes,status=yes,menu=no,scrollbars=yes,width=670,height=670');return false;">
+<img src="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/preview.jpg" width="150" height="150" border="0" alt="Example View_nii window"></a>
+</td>
+</tr>
+<tr>
+<td width="80%" align="center" height="80%" valign="middle">
+<strong>
+<a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/NIFTI.jpg" onclick="window.open(this.href,'small','toolbar=no,resizable=yes,status=yes,menu=no,scrollbars=yes,width=670,height=670');return false;">
+View fullsize image</a>
+</strong>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+</tbody></table>
+
+
+<span style="mso-spacerun: yes">&nbsp; </span>Reslice 3D (or 4D) NIfTI data or
+     ANALYZE data with affine matrix M in .mat file. The program will base on
+     the affine matrix, which is especially useful for oblique images with
+     non-orthogonal rotation or shearing that cannot be loaded with
+     "load_nii.m". You can also specify voxel_size, etc. It will not
+     cause negative effect, as long as you remember not to do slice time
+     correction after using "reslice_nii.m".<span style="mso-spacerun: yes">&nbsp; </span>For usage, type:<span style="mso-spacerun: yes">&nbsp; </span>help reslice_nii</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="7" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>view_nii.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>View 3D (or 4D) NIfTI data or ANALYZE
+     data that is loaded by "load_nii.m" or made by
+     "make_nii.m". Activation map, ROI, etc. can be overlaid on top
+     of a background image (see above picture). Plotted view can be embedded
+     into your existing figure window. If you use it as an individual program,
+     it can also edit the orientation and voxel value of the image, and save
+     the modified image. See detail at <a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/examples.txt">http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/examples.txt</a>.<span style="mso-spacerun: yes">&nbsp; </span>For usage, type:<span style="mso-spacerun: yes">&nbsp; </span>help view_nii</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="8" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>load_untouch_nii.m</b>:&nbsp;
+     Load N-Dimensional NIfTI data (where N can be from 3 to 7)<b> </b>or
+     ANALYZE data (where N can be from 3 to 4), but do not apply any changes indicated
+     in the header. WARNING: Do not use "view_nii.m" to view the
+     dataset that is loaded by "load_untouch_nii.m".&nbsp; For usage,
+     type:&nbsp; help load_untouch_nii</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="9" type="1">
+ <li class="MsoNormal" style="mso-list:l6 level1 lfo20;tab-stops:list .5in"><b>save_untouch_nii.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Save N-Dimensional NIfTI data (where N
+     can be from 3 to 7)<b> </b>or ANALYZE data (where N can be from 3 to 4)
+     that is loaded by "load_untouch_nii.m" or made by
+     "make_ana.m". If you do not modify the loaded dataset, the
+     header and data in the new saved file should be the same as those in the
+     original file.<span style="mso-spacerun: yes">&nbsp; </span>For usage,
+     type:<span style="mso-spacerun: yes">&nbsp; </span>help save_untouch_nii</li>
+</ol>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal">Other Programs:</p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<ol style="margin-top:0in" start="1" type="1">
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo21;tab-stops:list .5in"><b>collapse_nii_scan.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Integrate multiple single-scan NIfTI or
+     ANALYZE files into a multiple-scan NIfTI file.<span style="mso-spacerun:
+     yes">&nbsp; </span>For usage, type:&nbsp; help collapse_nii_scan</li>
+</ol>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<ol style="margin-top:0in" start="2" type="1">
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo21;tab-stops:list .5in"><b>expand_nii_scan.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Break a multiple-scan NIfTI file into
+     multiple single-scan NIfTI files.<span style="mso-spacerun: yes">&nbsp;
+     </span>For usage, type:&nbsp; help expand_nii_scan</li>
+</ol>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<ol style="margin-top:0in" start="3" type="1">
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo21;tab-stops:list .5in"><b>save_untouch_slice.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Save back the portion of processed data
+     that was loaded by load_untouch_nii. Although you can also use
+     save_untouch_nii to save back the entire data, this works better when your
+     data is huge.<span style="mso-spacerun: yes">&nbsp; </span>For usage,
+     type:&nbsp; help save_untouch_slice</li>
+</ol>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<ol style="margin-top:0in" start="4" type="1">
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo21;tab-stops:list .5in"><b>get_nii_frame.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Return the number of time frames of a
+     NIfTI dataset.<span style="mso-spacerun: yes">&nbsp; </span>For usage,
+     type:&nbsp; help get_nii_frame</li>
+</ol>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<ol style="margin-top:0in" start="5" type="1">
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo21;tab-stops:list .5in"><b>flip_lr.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Flip ANALYZE or NIfTI image left to
+     right (and right to left). The L-R flipped image will always be saved in
+     NIfTI format. WARNING: Please use this program with caution, although you
+     can always flip it back.<span style="mso-spacerun: yes">&nbsp; </span>For
+     usage, type:&nbsp; help flip_lr</li>
+</ol>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<ol style="margin-top:0in" start="6" type="1">
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo21;tab-stops:list .5in"><b>load_nii_ext.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Load NIfTI header extension.<span style="mso-spacerun: yes">&nbsp; </span>For usage, type:&nbsp; help
+     load_nii_ext</li>
+</ol>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<ol style="margin-top:0in" start="7" type="1">
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo21;tab-stops:list .5in"><b>mat_into_hdr.m</b>:<span style="mso-spacerun: yes">&nbsp; </span>Integrate affine matrix in old SPM .mat
+     file into its .hdr header file to be a NIfTI file.<span style="mso-spacerun: yes">&nbsp; </span>For usage, type:&nbsp; help
+     mat_into_hdr</li>
+</ol>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal">For NIfTI image, "load_nii.m" will take the affine
+matrix in its header and make appropriate space transformation. The affine
+matrix will be transformed to a diagonal matrix with positive entries and the
+image matrix in the loaded structure will be correspondingly re-oriented, which
+is actually in neurological convention or RAS. i.e. X axis from Left to Right,
+Y axis from Posterior to Anterior, and Z axis from Inferior to Superior.</p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal">For ANALYZE image, "load_nii.m" will load the
+image as is. Since an ANALYZE image could be in RAS or LAS depending on your
+assumption, many people are confused by its laterality, especially when an
+ANALYZE image is processed by different software. If you are still using
+ANALYZE image, I strongly suggest that you take a look at the table that I
+summarized:</p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal"><a href="http://www.rotman-baycrest.on.ca/~jimmy/UseANALYZE.htm">http://www.rotman-baycrest.on.ca/~jimmy/UseANALYZE.htm</a></p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal">Because "load_nii.m" can only handle a subset of
+affine transform (flipping and orthogonal rotation with a total of 48
+orientations), you should use "reslice_nii.m" to handle the rest of
+the space transformation (e.g. NIfTI files with non-orthogonal rotation,
+shearing etc.). It will not cause negative effect, as long as you remember not
+to do slice time correction after using "reslice_nii.m".</p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal">If you prefer the loaded dataset untouched, you have to use
+"load_untouch_nii.m" and " save_untouch_nii.m" program
+pair. In this case, the affine matrix in NIfTI header will not be applied to
+the loaded dataset, and the loaded dataset should not be used for other
+programs, like "view_nii.m" etc.</p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal">Two example datasets, "avg152T1_LR_nifti.nii" and
+"avg152T1_RL_nifti.nii", are provided under NIfTI web site <a href="http://nifti.nimh.nih.gov/nifti-1/data">http://nifti.nimh.nih.gov/nifti-1/data</a>.
+As is indicated on NIfTI web site, "<i>The first image (LR) is stored in
+radiological convention (LAS). The second image (RL) is stored in neurological
+convention (RAS). Any NIfTI compliant viewing software should display these
+images identically</i>". When you load them with "load_nii.m",
+and display them with "view_nii.m", you can expect the same result.</p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+
+<a name="update"></a>
+
+
+<div class="MsoNormal" align="center" style="text-align:center">
+
+<hr size="2" width="100%" align="center">
+
+</div>
+
+
+<br><center><form name="dnlForm" onsubmit="dl_matlab_nifti(); return false">
+<input type="submit" value="Download Now">
+</form></center>
+
+
+<h3><span style="font-size:14.0pt;mso-bidi-font-size:13.5pt;font-family:&quot;Times New Roman&quot;">Update
+History:</span></h3>
+
+<ul style="margin-top:0in" type="disc">
+
+<p></p><li>
+2011-06-10: You can now create RGB NIfTI / ANALYZE file structure using make_nii / make_ana program.
+</li>
+
+<p></p><li>
+2011-05-02:
+ <ol>
+ <li>
+ New program "load_untouch_header_only.m" is provided to load only the header section of NIfTI or ANALYZE data.
+ </li>
+
+ <p></p><li>
+ New program "save_untouch_slice.m" is provided to save back a portion of processed data that were loaded by load_untouch_nii.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2011-03-10:
+ <ol>
+ <li>
+ Added a new feature in "view_nii" program to edit voxel value or set landmarks and save the modified image.
+ </li>
+
+ <p></p><li>
+ Thanks to the code from Roman, which speed up "load_untouch_nii_img" program when the slices are not loaded at once.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2011-02-15:
+ <ol>
+ <li>
+ Fixed an overlay problem in view_nii.m, so the color of minimum / maximum value is now showing properly.
+ </li>
+
+ <p></p><li>
+ Included an overlay example in <a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/FAQ.htm">http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/FAQ.htm</a> and <a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/examples.txt">http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/examples.txt</a>.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2011-02-03: Thanks to the feedback of Roman Fleysher from Yeshiva University, I fixed a bug when loading a quaternion form NIfTI data.
+</li>
+
+<p></p><li>
+2010-08-19: Thanks to Rembrandt from Radboud University Nijmegen (Netherlands), I made 2 small changes to handle the exceptions.
+</li>
+
+<p></p><li>
+2010-04-13: Fixed a bug in "collapse_nii_scan" to collapse Analyze format data.
+</li>
+
+<p></p><li>
+2010-01-06: "load_untouch_nii" now supports loading specific slices of NIfTI or Analyze format.
+</li>
+
+<p></p><li>
+2009-09-09: While an N-Dimensional matrix can be saved into a NIfTI file using "make_nii / save_nii" command pair, a 3D matrix can also be saved into an ANALYZE file using "make_ana / save_untouch_nii" in order to be compatible with some ANALYZE only programs.
+</li>
+
+<p></p><li>
+2009-07-03: Fixed several bugs, and posted informative table: 
+<a href="http://www.rotman-baycrest.on.ca/~jimmy/UseANALYZE.htm">http://www.rotman-baycrest.on.ca/~jimmy/UseANALYZE.htm</a>.
+</li>
+
+<p></p><li>
+2009-03-25: Thanks to the feedback of Kate Fissell from University of Pittsburgh, transformation matrix M will no longer be saved by save_untouch_nii.m.
+</li>
+
+<p></p><li>
+2009-03-17:
+ <ol>
+ <li>
+ Thanks to the feedback of Bryce Wilkins from USC, a typo in one of my message display is fixed.
+ </li>
+
+ <p></p><li>
+ Thanks to the suggestion of Ashish Raj from Cornell, 'expand_nii_scan.m' is modified and 'collapse_nii_scan.m' is added.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2008-12-05: Default data type for 'make_nii.m' now follows the data type of 'img' matrix, instead of float32.
+</li>
+
+<p></p><li>
+2008-12-04: Fixed a bug in fliplr.m when reading files.
+</li>
+
+<p></p><li>
+2008-10-23:
+ <ol>
+ <li>
+ Properly handle fread/'*char' problem with foreign characters in MATLAB 7 and above.
+ </li>
+
+ <p></p><li>
+ Reordered input parameters for 'reslice_nii.m' program.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2008-09-04: Extended Load / Save / Make programs to N-Dimension, where N can be from 3 to 7 for NIfTI data and from 3 to 4 for ANALYZE data.
+</li>
+
+<p></p><li>
+2008-08-28: Added "load_untouch_nii.m" and "save_untouch_nii.m" program pair. See detail in Description above and FAQ at: <a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/FAQ.htm">http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/FAQ.htm</a>.
+</li>
+
+<p></p><li>
+2008-08-21: Added a "verbose" parameter for "reslice_nii.m" to provide an opportunity to disable the progress display.
+</li>
+
+<p></p><li>
+2008-08-19:
+ <ol>
+ <li>
+ Program "load_nii.m" is modified to take tolerance parameter, which is the distortion allowed in the loaded image for a non-orthogonal affine matrix. If you set 'tolerance' to 0, it means that you do not allow any distortion. If you set 'tolerance' to 1, it means that you do not care any distortion. The image will fail to be loaded if it can not be tolerated. By default, it is 0.1 (10%).
+ </li>
+
+ <p></p><li>
+ New program "reslice_nii.m" is provided to perform any 3D affine transform defined by a NIfTI format image, especially for those non-orthogonal affine transform (oblique image) that cannot be loaded by "load_nii.m".
+ </li>
+
+ <p></p><li>
+ New program "reslice_nii.m" can also be applied to generate an isotropic image from either a NIfTI format image or an ANALYZE format image.
+ </li>
+
+ <p></p><li>
+ New program "flip_lr.m" is provided for LAS-&gt;RAS (or RAS-&gt;LAS) conversion.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2008-07-07: Thanks to the feedback of Holger Krause from Heinrich-Heine University Dusseldorf, the bug in "mat_into_hdr.m" when input file containing a path has been fixed.
+</li>
+
+<p></p><li>
+2008-04-08:
+ <ol>
+ <li>
+ Added a new feature to load and save NIfTI's header extension. Program nii.ext = load_nii_ext(NIfTI_file_name) will return empty if there is no header extension, and save_nii(nii, NIfTI_file_name) will save header extension if there is a valid nii.ext structure.
+ </li>
+
+ <p></p><li>
+ Fixed a bug when loading qform data, which was introduced on 01-FEB-2008.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2008-02-01: Thanks to Jeff Gunter from Mayo who suggested to display a warning message instead of throwing an error for a very oblique image. Especially thanks to his code of checking qform rotation before applying voxel size modulation.
+</li>
+
+<p></p><li>
+2007-05-03: Fixed a bug that caused the "value at crosshair" and "value at cursor" always displaying the value of the first 3D volume when viewing a 4D image using view_nii. Thanks to Ning Cao from UKY who reported and fixed this bug.
+</li>
+
+<p></p><li>
+2007-04-26:
+ <ol>
+ <li>
+ Modified save_nii command, so earlier versions of SPM can also open it with correct originator.
+ </li>
+
+ <p></p><li>
+ Modified <a href="http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/FAQ.htm">http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/FAQ.htm</a> with several categories.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2007-04-19:
+ <ol>
+ <li>
+ Many users asked for a direct load of the affine matrix in the .mat file of earlier versions of SPM. Now if "load_nii" in the tools detects that the file you are loading is an Analyze file and there is a .mat file with the same file, it will automatically integrate the affine matrix in the .mat file into the .hdr structure.
+ </li>
+
+ <p></p><li>
+ Fixed a bug in "mat_into_hdr.m" program.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2006-12-20:
+ <ol>
+ <li>
+ In "view_nii" window, a new menu item "Save displayed image as ..." is added in the "File" menu. This is especially helpful if people use "Convert orientation" item in the "Edit" menu to convert their old non-RAS Analyze image to RAS orientation. After conversion, the displayed RAS image can now be saved.
+ </li>
+
+ <p></p><li>
+ Removed integer rounding for "hdr.hist.originator" in "load_nii", but origin voxel will still be rounded by "view_nii".
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2006-12-15:
+ <ol>
+ <li>
+ Improved data scaling process. If scl_slope=1 and scl_inter=0, nothing has to be scaled, which is the same as scl_slope=0 situation. Otherwise, all values of scaled img will be stored in 32-bit rather than double precision, unless original img is 64-bit. This improvement dramatically reduced the size of the scaled image, unless the original image has double precision.
+ </li>
+
+ <p></p><li>
+ Fixed a bug in calculating origin position when original origin position is [0 0 0] (an invalid origin).
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2006-09-25: Added "mat_into_hdr.m" script to convert the ANALYZE 7.5 SPM Reoriented image file into NIfTI format, and integrate the affine matrix in its matlab file into its header file.
+</li>
+
+<p></p><li>
+2006-07-26: Due to round-off of quaternions (quatern_b/c/d), sqrt(1.0-(b*b+c*c+d*d)) may become complex because value inside sqrt may go below 0 (e.g. -1e-6). Instead of complex, now 0 will be used in this case. Thanks to Jeff Gunter who reported this issue.
+</li>
+
+<p></p><li>
+2006-07-04: Thanks to Michael Harms from WUSTL who reported and fixed some bugs in loading and making RGB data. He also added codes to save AnalyzeDirect compatible RGB data.
+</li>
+
+<p></p><li>
+2006-06-28:
+ <ol>
+ <li>
+ "unxform_nii" from Jeff is included to provide an option of putting image orientation back to its original status.
+ </li>
+
+ <p></p><li>
+ "expand_nii_scan" is modified so the expanded image files will be appended with a 4-digit number starting from 0000.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2006-06-03:
+ <ol>
+ <li>
+ There was a bug in converting some permuted images to RAS orientation. It has been fixed now. Thanks to Jeff Gunter from Mayo Clinic who reported this bug.
+ </li>
+
+ <p></p><li>
+ hdr.dime.glmax and glmin are updated if hdr.dime.scl_slope is non-zero.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2006-04-20: Image data is now always loaded according to the size that is specified in its header. This is because that the size of some image data is incorrectly larger than what specified in "hdr.dime.dim" field, which has caused problem to load image data.
+</li>
+
+<p></p><li>
+2006-03-22: It now supports both COMPLEX64 and COMPLEX128 data type.
+</li>
+
+<p></p><li>
+2006-03-10: "nii.hdr.scl_slope" will take "avw.hdr.roi_scale" value, which is a non-ANALYZE7.5 field but exclusively used by SPM.
+</li>
+
+<p></p><li>
+2006-03-07: Image data type will be converted to "double" in the case that "scl_slope" is used.
+</li>
+
+<p></p><li>
+2006-02-24:
+ <ol>
+ <li>
+ Fixed a bug to reorder "pixdim" and "originator" field for some NIfTI data.
+ </li>
+
+ <p></p><li>
+ Added "rot_orient" and "flip_orient" fields under "hdr.hist" if package make conversion of the NIfTI data into RAS orientation system.
+ </li>
+ </ol>
+</li>
+
+<p></p><li>
+2005-11-16: It now supports both new_RGB (RGB triple) &amp; old_RGB (used by Analyze 6.0 from AnalyzeDirect Inc).
+</li>
+
+<p></p><li>
+2005-11-07: Images whose cardinal planes are slightly off Cartesian coordinates will also be loaded. See detail in "xform_nii.m".
+</li>
+
+</ul>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+<p class="MsoNormal">(Also available on <a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=8797&amp;objectType=FILE">MathWorks
+File Exchange</a>)</p>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+
+<div class="MsoNormal" align="center" style="text-align:center">
+
+
+<center><form name="dnlForm" onsubmit="dl_matlab_nifti(); return false">
+<input type="submit" value="Download Now">
+</form></center>
+
+
+<hr size="2" width="100%" align="center">
+
+</div>
+
+
+<h3><span style="font-size:14.0pt;mso-bidi-font-size:13.5pt;font-family:&quot;Times New Roman&quot;">Contact:
+Please send your feed back to me (<a href="mailto:jimmy@rotman-baycrest.on.ca">jimmy@rotman-baycrest.on.ca</a>)<o:p></o:p></span></h3>
+
+<p class="MsoNormal">&nbsp;<o:p></o:p></p>
+
+</div>
+
+
+
+
+</body></html>Ytext/html_.http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/¢Ô_WebResourceResponseOE¯ÿØÿà JFIF  ` `  ÿÛ C ÿÛ CÿÀ  Ž –" ÿÄ            	
+ÿÄ K    !	1A
+"Q#Ra’2q¡%8BUx‘±G–·Óð$67•¢§³ÁÔáñÿÄ              ÿÄ >      !1AQ"aq‘±#2BR’¡Ñð$%r45Áb‚²áñÿÚ   ? ²d×Âu§ùû"˜+(ïÃ6dc¥aÞÇ±ó+‹álÈr‘ÖÄ|chFÆ·¥_\H1m#û žë>Ä™Rcùê»#62%[˜ÎÏcõ/™ÏŠ÷«‘ÊÞ›-Âê|ÐMmÖxt±²9zG¤š©±qésMYöF	ˆÛdá§“e¤WÇ³%cašh"É4Q™Æö ÝR¡ýªíH ÆDÙ›¢<c""ë¶jœw±¯ãÿ g«Çñóú|þ½D6L²®_hòØO^r+7ˆwMF›iW%
+D8³# ¾µt¸ïŽ$®q`«šV¡£,8Ü¦j‰Übb5j±Ê÷;ÈÊ«4Éø¿'r
+£P©{Øä0{¡=î;ßHR{ï'‘Êç>ñ¾Õ©L3Aczw ÎTFŒ:ç›=Ê®TDáO9åWüñÑ} =Öjj‡®‘Þœ´ïÖŒí¢F¯×½úvÆÿ oõùôx+º1ôå·*<Cºj4è#áV“ŸóEb¿¾¯$ ¼O“ÐØyîsã=7È„g¦r~@±ç?*ˆåjøÛO)ÌŒ9YVO-‘æ²c‘Çòš!YbGßÊ¬……Y˜ƒo®„ßfï"Et†l æµ\¡·æn	Ï(ˆÜ	Ëúûv¢¯éïÓ˜}£]Âà”.ÁpúãBÉ+h[ÚËœ4$ê{«BMqÝ§Èæ¨ITÈÈ6ÌzHsÜæ¹Ebí­	+gZP™$ÊÖ ”ÅD4&7ßºu‘¦»Qû
+¶Ï¯g*½NUW„pø÷åWÑ?åÒõìýÇÿ 0ú¥êýª­JET]‘i²**¢¢ë¶jŠ‹õEOèóÙ~|§FÃããû›oww:W¶K­a:q_¨âÎ|ÊŸV2ŒšÂ£ð†‘æbh),pê˜sÀ´l¯/šx}8¥>K„DGxoº¯Î¯O_OÔõ£Ä»Ô~QVsõìýÇÿ 0ú^½Ÿ¸ÿ æU‡ø‰} <Óc»Ôý°Óík
+Ô˜{–ÊçUò|^}¯ãLÌÊ3RÖáöÐâ¤]’¼j)¥óŠ3$½C8C	é\êJü¶?¦ËÏ·¶»æÊ«ü8M<U_ìèðßu_~ž¾Ÿ©ëG‰w¨ü¢®¥ëÙûþaô½{?qÿ Ì>©]ÿ JßRÕ{ÈwN;—äßé×6E_î]<Oo—ðO¯{£}ªS’îÁìgNœåöF³]sg‘DF³OëÇÏøqïÑà-¾ê¿:ý=}?SÖïQùE]×³÷üÃézö~ãÿ ˜}T'	ûJÚé™dT4¢Øf×6‘+É8:ÍœÈtaÉb¢vž1„Qû*1ïcWÙÉô×æý§y®O;`8Tf8l#”º×±ÜÆ¿…îÓ¾=¹á=×åóé‚ÒÌ¸¦€Qq´6â“z!Õ8†Õ32˜thgÊ©‰¾!èD@9Fâ'â=õqo^ÏÜó¥ëÙûþaõKò}ª}MÔeÙœéóa5Ó6k¿àºyïÿ Û¯$Ÿµg©1ÛÜ» Ów¢÷*ñ®Ù¯<µ½ß/èõ9å9ùª/?%D^z€¶ûªüëôõôýOZOïQùE]/×³÷üÃézö~ãÿ ˜}B?ÂâÇüOânUö‡cº4º"ý7lfPg79¢dcæç2Êu½*ÖýÖ˜šŽ’W¯2“ÃéÆ¥Üvwñ-Ì÷=®µzC{£8¦]eæ—ÉTeùÔæ­làÆô65Q"8sU\2•ÇB	¼mW"±iñC ÂopŒ;¸S˜íÃ–˜[Y.ñWJÛ+e·f;Öü÷i9…TzOöWÚ7h\1Ú'pŽœ[‡;)Á¬ñþ<Ä>rÁ¬N„ßªù—^¿´½Ä»Õa· ³„ÛßÜ7Üý#H4W0þ½Ÿ¸ÿ æK¬©òOÕ9ýýôº¸6ÚyËu¯Ó}}5öžµæÞ%Þ£Ü?jwîœìky‰úíSpiÿ Êœ§®]o§ù&¤_Sb˜ÄO±°XqØÐ±\­îÚ®^9Dá?7¿²"sÏéÔc~¿è7¼¯÷UÜýÕe=Rá±¢Æ4ê¨–°2ò¼°ñiqO0ZG€†Úù#îG*+Ü£™ò^=ý•:™X)ÏÐé¾ˆÓUÏË¨Ë¨š§<!<|j0ÒLh&#QÌIŽkV¹S½ô÷NÕO§Rˆmkpº–Ñ‰cÂÓŠ-ULqF3B¾ìcÞœ¹\­íNUyöUùu'ûVÛ,L\0¤ßV¥æi–2:IÂÙ2]*sØÐEåE÷yHÁ1­á;œÖòLFc X–…é}¾e–#ï²_«+k«ÑÑª*í¬†ô	HöøæX>½wª*‚)6"F#ÙªPLNê  7$?IÔšÌÓ<R@ÊÒ
+ÜRŒ¤í$€ ’j­tßÝKke©Î®eJål•< Ê~;›Ã;WåüSŸ~zjóíÏ±ÜJÚƒYtösŒ“#­cíâA¯)oFù}Ìkœ¯½‰Ê§(„^8EöžM±f ‹­WeÊé÷¸¾IUr£´ãXóÄø>F‰U©çŒù-‘…G4Áb±Qü/FîæöÓbtkeG¶Xå¤ÕØS‚ÙŽ¨’ÑH‘ò|}Åƒ)¥AÇ,¤S°ìpJR)‚®¯ÄVƒIÐªúÏ)äO~‰Ì=þ”ö˜ZÙuôB’Ü¥ÄÌ)!CÊ½t)>`cTå$À ×8Üì:l½MÑ§Ó^óYU#[ë*UysÄ@vµêÆ/)ù›íÂð©Ö[à0"Çø°mc†Qƒ[ö=×3Cµ”T_§×ûù_u²NçvÐºtùÝ$1»´+£ä”>4X„‰%U„2Z£Ej=UŽyú|º‰=‚h„}øÝí¡õ @ãù5~´ÝUö7´h)z¨%ìj"v§or¢¢/	Ç>¬ª5q±ßíÊ¹ÍEU§ÐÆ¢ª"û&‡àËíÊ/Õ}úˆúÙvr…
+º1$É3ÚÑ„#G9Îr¢'³[Êr¼p¿5ú~½L_Ç®çüY70ÜSž«BÆ65U\íÁZ‰Â"ªüøDãÝxOªõ“ÚîÚ(´×«Ï³z¦[åWñÊ
+eyE(ÞÎäDr¢óÂû}>]P¥¤{Êrxq²îX±j2#Ý4Œž5áÜ0n^õr§²"¢¯ðETêAtÛm:‰º0jq+|þÙÖ¡}#½
+žÈˆï
+Š¾üü½Ñ^%Ëm
+Ëu²Ê¯#Ô€HJù/ÕãQšV	G5B/NÆ#S–µ[Â'*åáRuð‡eV+YXêlO	„è¬ôÎ<OZR4jù¢PðþØèÉ"«ãa
+ž.±­Ö› 8âUõB”>Àu¤„‰Þ¦[a÷×©qv–w7(j;Å2ÊÜJ'`¥%$Âg1@€j¸Úi£z›]gM£ÐZÊ”²€D4¨,yš•½ª©Ê*7…züùú'+Ö&ËAW°:­ UÎª0XÉ2ë«ÚÂ j4G½ªÆ;·µU9÷TýQ:ºT½¦ÒHÇ±˜xÜÊºûZXjÛ’Ì$±.¥9â*;„ŠµìŽ¾p…èHè;B<ªç›t±d›|:Ë™*|ŸÖ„ò,D‘4zÏˆ±J2×”.dKbøÔ$o—ÆþXÚûgPî+|¤ÂG®—xçÿ }‘0t¼±¹±ÈÝËy	Rˆ ‚%HiYg¨Õ*¤Á)‚i%¹ÿ ‡¾šb¶Z•·ã8Î„2ÊµÆ]ÚÉ°•­W½kIÃ8TNïÇ<ûñÔ
+dÔ63fÔÙ ‘åÃ)A½ª×£ÂåkÑZ©ìî;¹DçŸeN:¼¾ævñ’hMä­OÓð;îQ½ÿ ‰ñæë\¹B:7oò±]óNQ}º®'Ä_Eh[&»Z0H‚?–1M68H6.EY"½¬Twr+WŸðêÒ Ôº}“¤ì¬ßÛWýCíí?_êÀÖ„O×Ù=ÿ ^‹†ÌJÌOuXžAq:=hp=Pl«9`2KÇX1yæK c‡Ègˆ,R•¨â½ƒOÌäN…O²ŽÔˆ~]¥ÛÒû{|ë5WûùåWøõ »+Òì^÷[ðjl–‚¥†ŸD“\a<  	Š,Õ|BG8ÄóÄ
+Áˆeb!;Ú®jùo[‡¸·³'ËíòÄ ~²pþ¤F©N’w +½>J8ºðÿ “ïËŠÉ% b½–p³
+—
+	îî8·@ujSæJS Z–Ýkì ÚÃcY2%|Á!âNƒ$2áÊ•Íi£IŽòÃW5ÍïÜÞæ¹¼÷5È‹¯=-5v?W
+š¢7¤­®
+‚e<™NÜRÝòfL¹!ŒRÒc„{žGrœ.½J¸.†½óÆ$Í”îú”,$­°kÌaºL˜ñ#µçÓ˜MSÊ–PÅŠW"’D“g$)Æ¹É\]™à¦Çp}§U9´Fc«¾õ’ dØÌ”{ü#àƒPZ•²ZŸ4x¬ãëÇV;ß2wl«w­ùó¶-wOoŸ¾˜ä©Õ}öpÐ¾.×/Û†×§äC(ìˆ¿'{/+óUê;èºQO‡}–@0vÙo•Ð‚›–2À‘*N²"N¹>Åôª­C·mÉéö˜ÖC©È4ò¢ÆÕ“PeP%P? e´ |^éŠâ(#…¥ð¶,¸Èö«Dá÷¹ò:Øwk¼ÊNïÄ¡`õ™v˜SÖÛZ#X±œÁÙDõðÕ‘e‘Ý%ŽfI¼¾¥‚zÇF¿°if*ì_'Ö\Ç+¦a˜Õq]P’Hë8DòOsëÆAú¶¾žaJ ã–|´ÀfµJ!yºó‰êo—"¯ÅCH±éÙÖ1èÊ"†bJxZ(íxFÇŒ8ÃDAˆN!•sb)ŒEd^Yœ¼þotFÄO÷IßbzžU!·K)QAR
+À˜à:¡™`H‚(R¥ø„í3nšïŸcåf¹~¤cù•¦
+Lrßu‡,ÇƒžScð²ë:|s&¢ÇO“ÜÐãÒEtE ‘<‚‚õ–1+¼
+ãøÙírÆ¡fäîàƒ*I…ÈZÍ®k”l~#!£fI1æÞâqÖX±üGš[1# 1[&CNºÃÝü.~Ös®Z‡µmÉçú»©¸ÕV©åæ‹jfâR-~{•bTT¹fAÂµBŽ“²¹ªÅj£\KÇj`žTXÔuê9D“]9u;ØoÝ"Ä·ý7Ë"Âdú[ýEÝtÚrA’ç*ìvúµ2,XŒŠBÌµ¯#ÚÒÇEaD¨±¢‡p°·à‹›6Ï1Ä_7xBð§­cÃ4ð]ºˆ¹J—ß÷p]kV‹ „½‚˜·˜†3jâÃæÑ»UY4›¶ñt‹•¯(>)Æ<;L†íK"Ø8§_m ÷ŠY1ANè7Šnr·'`açt&È£K¡¨3oÍ$©h£ˆ&H8Œ³•±}dvžÑðÍ9\‘L_†'DöuG»}«n\Ù2MÇôV·Qhr¨14£[ƒ{p|›O²\.ñàÎÀ#E?¡³¾„û¼eÂ@‡`¼²š0>Æ”»ÚPòMAÆ«4Stå_:R]¿\u¶N?—I¨4Yl¡Ä¥ÍÕÎ,®‹(ï‘_] 1çŒCÀ3âyò”Ú-·êú!]CÐ]ÜÄ`rÙØbC—¨zªé‘ Á \•ùK’ÃRQ¬ÂˆˆH_x«ÑÉl2Dt5–£-®€k‰ä´¬8yt «ÍÈ™#B`æuâ8¤¨žó×iMÙ2bf ¡€“¾šÔËv¿	|Ïw_-BÝ•&¯i-3ÊÇ¦ãƒŠdµš¥5ŒO±ÌFÈv‘#às)‚ÓÚRI4fŠØÄH©`dy 2³M>ŸõrçÚ—¥YöSòƒ©Óœ
+mõÖ2·Aº¨vE
+ÞŽ¨T®“NxvQC,ƒ•c\y5 ˜!lsf;td(vµØ]ÜE±Å[7/Ê1®œKrKSÛ]'¸ËêUÏ"¸ÞEsœªª¬¶¸mß@´nãO5Z¾™h/åë/ß*»Ê²kA¨%ÐäíÎ+‹iµákåA¨ƒˆ2CH°á4F¨]WŽ+†¶nÚn+ùÙ6n£7sý?t›E¡J‡õu+#3RR²LÁZÇÝ¼m¬eÜ%î½nÚ\±7)-¡ÇÐ—Öñ¸IL!’¢‚˜bW)šc°ì“ÓÅdxÑ‰r±Ú9c„ƒ†Ç"wE‡Ê·ú­á§œ)ÕªÖvŽ~ðûy7‘;•QÕ^=“”F¹~_Eùü“øô:ëŽ c3q¡ÈÄ2x“ÔV¨+U®#ÐÍ†‘Þæ½¯xÙßdxÑ
+'«¿—¹Q:bñÌÖmT¨VÔw|¦*8&l”)¯kÐˆQ•H"ZªÒ0£s8üª¨‹×–7ƒã·‹]ÝÆ+j‡¥²¼1ø0'ç$”$ê J	óI$Šè{®:áÎ´c‡pœ»«VZeobl_7n:žPBYq7¤e+[—:Y[B£*+–Ã¬+kÖHhJóX½‰,BF„Òš.T3š%"ðžGvµWßµšËdlz5TºiÐÉgR†é•Äa¸keFT¡òZV÷18G'wÊtcû‡Äª±?Q’X:û?±5”xõÑkâ°ç"UòF(ìj9£–øã4É
+gŸ¨ø´väÐµ†»<ËòkHôk~+XðQLRÆõ¦C. ’Cd=ZÙ#ïåÁy•¨÷5­u³ˆØñÛ×ww6èÂðÆ×n»@Z—s§¾B…ð0ÖªJH!Â+Aâl_Äl­Û¶gú—.Çˆe[,’³­¤¸ÚZÜZ’¡ÝdÊTI¢+{»p…ovQIQÝŽf$­ôDŽØÐ©n¤'Œ¤b”@Œ6Ï+L£Ÿãž“ç§œê”»ƒÛÍÐ*u¿F,þäXð7$Å[''Æ‚A5ä{X3Ûb'·sØÆ§9S„ç¡ nnùF!w1ñL¤Ÿ"2žé„)V;ßóÁXfË`
+¢
+Á¸¯c;•)¥½ÃVûrÊ§ Åq÷²…Ír/1_ìUjñî¼¯Í9á8êÙMâJqÂ›ËD£9(þÜèò“ GÎµôßž¢ ÐCJL©JIÎœãÊ b4FÊFÇR9
+b¾Ì!aˆ;âÀÔ¤q ÌbTd˜ö@£X•úÌ×ú¤¡³²t%ý£TM˜€qÑ	àGø‹Ù%ÛwvO‡çZu‘ãx,ü®í¸¦J ÇcX@$«#P(fÈ#JVÂ,™ãXÊ@ªDVI4tw=GŸÙ³Ž(ÙWÄ‰¡ãÆ¶z¬áõ©øŠ§üÖl4ZüÛHe •TÔw#j5Êÿ 6šZ?„j"÷*«yDD_Ñ>iÖ©Ä–êsà…ºPãŒb—*RÒ…6|$eA[…;Ö©)™‰Ô„â¾²”Ý qMŒSpF2Ê~íìuD¤ë¢Ê`G•gí¨µ•µÆ=Sg{LLzâlO5…!^R¸þs çb2+ÂÁHFl0è"µ7tºÏ¢qíÇj§Êœ*}xãü¿Ÿ¯K­ê¹f†î".Í7hŠœ¢í§\QQ~J‹¦Ù*/öõO*-ÉMÑ$ÒÖ˜Nžü<[20Üïh®Ž%#Z×+}•UyEEú{'½Â÷¾Çf;¶{öÏ®lkœ¨ÖµÏÓL‘­r¹xF¢/ºªª""r½QïH±KŒ—Klð«h€œù” ,8¢"5V3;«Þ©Ê/Ë—·<tQRŒ|{ ä¡ªÄGi¹HÕ0y}#d•Šèý¨$+Ð"kßÛÞ­ûù‰"Z#ŸRnhÑ¤È·:ÐvØ¤'Ÿ¶j¹¬Es›ÜîWß„çü:ªŸlƒRS u¼Š²•–É†æ¢#þ}¸+ÃSÛëÇ·Ó©¬³Ê´BãwSk’¸(y*’PoV„j÷±S½·ò{¯ì©íó^Š+£N+¨¸Î˜èü|#NâçUNÀñÀX‘¹u~9:¹Á…(PA´ŠHóHåõJöHbŒpåÍRšÍ+S·+$	 Û49Ç—ÝdQ‹Xñ J«“ÖtzŸSnxIC.jÃÃ¶#-q%¾4³wGU3}¦ïÜ>E·í¹_èîG¥µÑíôGIl-Á©Ù·œö4ÔÖv’à.:x,•$@C$™‡†É:È®{ž	q	Ðw^)ÔÉO}¡‡…))ååº¤ÍUÕò„V(*Ë„5qfÇÈæÒMÈM*|d°¬‹¦
+Fv£ê'üSð§sí?Èf9ÞºÖÌ»£rpBf2•¦°Í+¨A<–PÁ&ýˆsyIÅ!Jxè­† É,q Ne”f×x¬óÍÃFÆ)¬+t:¢~O2ž¾]Å5ª%}E¹¯,"N­Ú÷:Á°éÕ²[^ ”Ò…E)! ý2JÝÎ’ß+‘ˆdºO°Þ­¸Œ<ž²îrÅrN†°‹n”ñ¡I8KZ’ÐÌ¢”þHpÉªõœ’öF¢Ä¯¶ß ïƒŠÂ<«üQ‘¬GHf7¥}Ë[.›ðIoHaÕNŽé6ƒ•ªwRVÉeŸn>-Oa[¡Õò™tðå[ãäÔ¨µõ6¥¿›U`o½l„1­’Ck£ˆ†(l1ã¶üIòÇ%ÙT­XÆSKnM¸Í(¦•¦üwíZ{•K(¶Ñ„²	0±ÚÔk½;ÝùQþ6ž“ëwpÜª#àdÚlùd–1ÉŽf1²Öb›OY1öRèÛbÉ‰(Ég:!Ý"™L…7²KAŽ^aI€l^~k‘ÈZ|kZtbÖYÈ­k ÊIéÑÊîò\þo«¸TUöéßŠ~"Š‹ÃènY¶aà_sj¬«úF¨‡£´ŒHÏŽ†\­îyÊ„cPìA•žDå\1*"/£NéÛâöV:J%Ž šÙí\×;†òþ„öOnxO¯
+E>;ñøsJ\êàŸsã0MBoT|pDj;B½êæ1¨œ£[ïòEåQ§F÷ÕºcL¬Å³2’½èñ1’žÒr5å¬r¯<¢/·*žý"B‚@QÌ®dz{+#ÊmN)L ¶ÙË•EE0*:™Vb:±4êfÝÀ´ûSñ=7‡XÞÝÝB‡"SˆÕ`Y$R*¢«ZŠïê÷"óÇÓ£·H0,ó[*!Úb#¶Èõà°tJ –RGŽF¨B QÝŒî"1åNç*5½ËíÔ ]í/¨¸Ž¡gG!ËøSÁ%¯sd†‘ZŠ‹Âûû§Ñxãž¤kûÄ&›ãP± ÅÈ"‚@ÂI°‹ d#1µZ¥ŽF‡+ÊÕr§(‹Ç(Š[ÿ u¾þmÂwªÆý“I¦DLÆw$šþmhÔÕÌ^fœÐdl¬æD°ªÁž3ŒªðÈ„äB0¬V¹¨ªˆärsóâeF·L_5Ç'r’l+ŠGÈWr€rˆ£W}8Nü>]Iþ§ëîºŒ˜í,Yªæ¶l¹¦iùÚˆïÌç?•UU^\åU^Wž‚ˆ5mn‘íYqHäRÙ‰Hf¸¬ˆ¯bÿ _—'<ªþdEEUç”÷êÂ™Z¿Ù”²ç|C¥ª÷8ÆÐÂª¯Êº´»ßŸeO’õ?p4¢»  Òlz}®[[ç›M*Â$›_uégé•„â‘¶Elµ|µXmŽÉG‚Š¥Ä
+ŒRIÕ}>ÌIB`ü@ÔFUY¡]Þ#ˆÅZ­gã½Xç#9áUÊ‰Â*óÂ/yÊ®j°M:ÑÊm}Ña‚œÖ0ê¥ÂšV3Ií¢¬.-Ç]%´Ù€z«0æ]Íhä+»›CŠ°]Ä07ýÛ«Ðí!™÷„O!^±Àªl8Cµ+5)ÃöVà•wn_ï
+ZLuœS“‹ÐFÅ¨*ñèG“&%LgF‰‹Ô®‘"KœFÄ Ñ!íbÆp¢FÖ¥×çÈcexõNG4Èqmâz°Ež€I`bñÕ‡X¦“ê¯ž2Ç`˜.†G5è½.¯«Éëó–¢&1‘ÊÈ*j¯ècQ[I»¢½…Ê’ê¤K
+›šé®d9õ61X–0¥½‘äÄ)‚g´or¤J]àÚYwnûÈùþ†µ(0è#ªÁ´ëC+ÂR0W5²gH¦‡uK¾Ð„©ûÇ#tU‘#[âæŽ#’ØÉØß×±}ç"¢*.Ô÷ŠŠˆäT])ÊQQZ¨¨äTöTTTTöTTë•LXp3¹cÊçBˆªç(ÑUÎs‚ªª¼r«Ê¯ÍziJI‰ @ÔÆàí0uq§-Í,òÓ®Ããøm]0™·Ì#PwúP ÷/ìE7F†TçßÆËæ±U~|öò©ïÖ2nØ´¾Å†õ»¨ÑyŠñ®|¡h|¾Ãr*¹MnOÊˆª®G/"óíÏ\ÿ ¶íµo²õo_M‰Cs_cs*aŠŠæ‹¼<¼Žo(Ö1UÊ¼ržèMv‘|<4îEAcàÚ$üþkaHi/.«â†Œ±ÈŠ¢ÅNX÷/	Ë¹V¯	î¾æDôŸ}%t}Äô“8¼Ó½™‚kþ]€Uâº_ˆÒ³Çð;¼[0ZøLÁã]ÓZ	*\N¦’A‰ Œ…th„fá”hÞ­ZßÊ¶Æw9¨˜ud±Ëgáøø†œd¢’]Œ‹"¬‡™4E!ê¢´å—<IòŽYì$,v‘iVŒNÒíœ9È‹‰ê. úQ_Šã5š¥o…£[‹ÕÀXÅ+¯«"dpâÏõU Y•ÓZ¬i ‰|n0\äÓèÞ€ËÌ+²ÜsS²³XšÓ³ƒQK¸<ªF5a&ŠÆDš¨­Å£å†©^k¶uC">¾éË=œi	‚õSþ#à)U¹öŸn¹þgùm¥¼çX;%JˆutQâ’²£ÐG¬lb
+AÐêÓZ2EÌµŠx¾g¼hÆñÉ<Â*­c÷©Æ1Ej§{šÄkŸÂ«•;ÜŠî9U÷ã•^ƒ¼‹Hv×–\å9-Þ EŒ™^3”>±K¨‡G-¶É­­k&À­¹…[P`É¸¸	ÆBa!gÂ<§oM¶})ÒÌˆYÎ#+$™Ôs+‘öyÝöYQ:²áõ“™ !º›b9rÄ—^ðwˆæG©„ñ£]IDŸQÏñ7ÓHzÁ·ú9°=thy&±éÐŽkZÌž½­€ÛëTI4w!‘[=¯|±’´$s$1¡b¤Œt|AoGivYßvŽ³`Jé©Aa”8+"K½´5ràØX¸Ž;FŒ‹$ozÊz< #U·â>"Š‚Š/‡UN2vËÆ³LS”œ+ePè¾ŸÓIEùò‡­¬ŒT^}ýŸíúõ¼.Î3e^çkÕ›ú»
+£rû|½×•öãÛôútúâz¡øÊ“&Èisú—Uâ´‚¸”k!º %‰dÄ<¸tõÉu•òî$ 2År2DXÊ÷ÊƒÕéwKu6º¥¹¬ºË‰Ã²Y.´*Ê¶¶œõ5-§ŠÛ%‘«  ±Ö¶,àL<k+ŒUÞ j¥n%-”@0	c¡˜:OOÒœ”)B@cqéÈ™æ)·•³üîs@Éºÿ o1‘•;%áÔÒXoÉBÓ©%O§×ÒÎîë±‹œj&£Q¸×W˜Åªä¤ÓÊ@ßQCÇáÒj(Ù;"¬\”–Q›v³JÖ *a Bb/"p,5Êêž4I–òáÆ„i•ÕË*§O¬r	d-Ì¬ðåÈ¨yÐãÀ©¢hæG®-äÉö&s öF‰Û’¢aäˆ™ÁZHY5›~Ï$ÂˆXµËi2<’ÅÌLpÈ‹Dâ‰ñQÝòcµ‚+šîé¹*ÊˆH*(„¤‚w (€t•™I#Ÿóø¸t¦ü;2Ì#*,}uQyEBEýQFÖª{ûüúoóÍ£ÝÝE6U˜æˆU?{1óôgÉ±ÙaÇÕE±¿HKtæ+œÊ×ŠV±Ìa{ûZ¦^žJÔ)ÇŽjÉ¥Î}žäôƒ‹T©Q!î¹Î`#Ñ„‡!LÆ»¸c	!B2îÐn·OŽØ_ÖÜeöl—I>l(Î§Ðk,š&E,ÅÎŽÆWdÂ$K9-*ÃÃÅ;"	l%¶<"„¯E–@Q‚f>±$'iê?‚•)Rµb.{o§/äÖCH´ÏÀl5fV=¥ØN—†|)5§‹‚èî9¥U7­?1°¯	˜ÝE(3Zê(V¦£ºŸE’U:<©såÑÊÓsP¨V¯M6í5£W“z*5x6ˆdÏ_ÌÔj§r'
+œû¢ª*p½xþY>êÃ:§=µ%ýuM’Ä´§§Jt‘*1ì«'§!Ê²¨’b½H@¥ÞTsZ"‹qp²{­½í®«ÌbÑä.!ê.JÖ¬‚·G/$¡ÄŒ—(•Œmx¥B,PŽc&:R+ÏLr*xnø6ãiR’ÇÒÈ’TRd“$Êyt§ÚâÙ±l¯˜K @ÑÆƒx:ëMç<ûªªªüÕÊªª¿ÅUUU~‹ÊóíÇÓ¥ÒO¯ö¯Ñÿ Âœ¢~¼"ª'<"ª"/K¬Õ]BVþ¿Ð_y¿î§¸/áÿ UYO×é×1Ò›maÎ1œ>¨"Kôk0ˆÇ9ŠÖ1Jò+Q{ZÆ"¹UxN=×å×Oü§;Þoû©îü4§*^¨çð¸Ò¡Wé¦w«’ã7×šLw3ÙË½Tá0NQ÷'(äG|ÙÊ§¿E-Ú…6M-+¤Eô:]§‘Êk7„z\Ì­Ž²'T²‘ˆvh÷™Ý£\÷µ«k–ášeY¥ùFoE€ŽUlL:öÆ¾-í+!J|Z9¯p[PÏè¤Ìoå3Ê'Èx_#TXødiŒbõ Ëã/¡¯Æ%ÝZÄVv¾Î|Æ†0Æb»òµ£|ÇÈ{
+A ûQUÙ7É÷/¥º_‹ÝDÄ©áxÙð£”HsÄ":ÎcÚÐøÕT@£‹Úäáyêâ×áL?Ä-/¬®¯8ªöå†pwÊ±´´--7­JA~îáÇÝº·;»t2r£;…i»ÃøWÅí®1[KW	†´ãøùiKfÝ¶ŠJÖâÐ –ÓºP‚¥• À”™iÖ{¥úCcš`¸–S:›Ámª%d¶ò*¬©a¬ÚyÕæ›Ä‰.®\Ù’ H˜X‡’r…Ì!åÌVm§o”™2Ú}ÒÊ¼ž-ÔLŽ6C_‚ã±.cßAC2À,A’ƒg²$0F˜m9š×pW÷lúA2ý-ÓÛh`OÃ¨'A]ÜÑB—^B×¯
+öŽ9Æ»„îF¢ª'<tãª§ÑSæŸ%þ)Õ">¢Å?øŽž¿Èªeh¥	u]Ä€`ú€zMmÆ‰é&CO:‚ÿ O±+Ú‹3È“aæ¢- ¦É“*d×žJÎiÈc
+TùfˆG½_KÛÑØ1µŽ=|(upaÖÁ± Ã<„ðÅˆÇŽ/!^B½1å{Þî;ž÷9UËšé¸G¡·Íë´×T1/ÄU™…¥l*|£.ªO$K	ÑÍRŠ\y±Ò)GhÜI‘ãz·Ç‰2pAÛ~‰ëžY˜êžŽãö•îMœËçe44ùe¤¾˜æä5Â†òœµ1/£Ã“¦wQ×¸îõ
+Ö,t]¥k¸	QD"Dju5¬…•æÌ˜	ÍgÙ´O§ðIÏQáñ,Ér|CAñ¼‹Wg’Wk.ž:¶ÔÐWÖÒD’’¦I™ FD<‚	I,(ó0cE{œƒt†¢§	Ê§É>½;ån›àêÓzw»W±!†JWI¶HÒE˜4§VÄ¤MlißŒD#F¨B}åd¥møˆ¬5Ö»ˆÖyXn8ÅÁtÒÓ4‘’dÿ ˆi¬n)&c18U˜ó±+³æd/«uÄû©9Os$MX@:Å†%iäç4ï[¯É(.¬é¶˜WøbS³‹–³eH± ¯Í9j•=ž™a_ ñë…u9RÛH/’³"»Phu01¦F°×Yµð!Ä¬’Í—Q:˜ÎŠÒØÎ™„%¡æ€R_(<ÅŠé’Xñ1‚à—k¬±‹ã3’j>E}çklÌ%Ó{¬b¢-Î2¼µ4‘ ŒA§ˆŠ5³ûÀAyŒù2Æþ(ÃaI‚3¨Ôì“šƒøÒƒ¨0("goÇXåMþ©Xö7e”d—ç®‘"ñh_¾¾Ý"I$g÷bÊäWÉ­…~òGÆ È¸1ÇŽxç±…ˆ¶0‹<sÂ¦æw6å)£`Z`ÐD‚çË)!I$o9[²ã2i)ð›N#þØ/U	Ž†--æsÝ^cÑÃF‘‹>H,%K¬ÈMQS$¼¥ŠµñDuxÔyÃ"TÒšYÞ€s6±w™8~u>ŠÖªI*êïg5SiŽÒYCXHÇÇ!{am.q$‘hÎ=|¸†‹R?Ž`DeR•\@ò©@À&O=HÚ £R‰Ö	·å¥6»×ÅñF×áº{70—35LÒ®^AR´5ô .>-Ð¬’²¾TÛqHÉk Rçb‰Ònkey°=nÔƒå´Ô}1ÑêlÆ”¹ú”ÛXñG[4‘[%}´²–E˜ëá»ÓÖÌx€r›À¬œ×ŒtÚ±5—%¦Ü^?7²Ë"®Šø»{‘UÖZ×Ï—O2¨óë¤Il×cV°[.0'4¢²‰2=‚8í,duem]PÆ•}NÈbÄ"¼¸ÓœÖ}µ‚‰¬|šÊº€W6·ÔJW##çbÆÑŒfsš‹—O®`ëšLÁæÇ³C´¨Ð´ëñc©­7 ÊâfV™mŒ*êŠqO‰t”ò u¡uÅÙØ"¼Q+Hgšq-5„ŠzbÜDŽ&UÆ‘½?YFWgíèzÂ8½-dà$yA˜I`¬ÑKðH$ CY,|&(ã¹•â”ORPÄk$ÁÛº<†ÊÈ·uÒ¤âÖ0_†žö¾ËuX7‘m²,n|9qîgÍ*–$Ê‡³¹©À;eFpÚ¨ÛÐØÔåôOŸ¶|Rš1àH‰±Ÿú?t91¼*>Ñ„ÜòVŽ"0Š¾F1íßxS7ü?Æ·€gù§·1ÔŒê¸Ô‘Hhë1¤hb\9•ëtíÞ8¡yeÓÙ¬~úÓñŒå8þeR+ÌbÖ=ÍAÈA|VJJñ4Dr1“#Å:µFp”dP ÌÀyF=W^ªj*\vkhj«é«šS°k"ŠVžBµNd‘­ò•XÏ#ÕÎF1¼£XÔEÖ‹R¨dß£UûÞS?jÛ€bk´¯)oøò‰Õ\¶€FªÐ·aÅQÅüiúÅ^ˆÔ0bŒOj=?Öjñìª«ì¿ßÕ¦7ÊøÃÙ^ï4r›a×‡ÊRˆ‰ºc“)™çî9SF!½Zò ¬GÕÇÚ|ì:çÚ<Ø0²C2Ää»§"í¿$—ŽÒ“éû&ÇE_õU„ŒýÂ™)	¶¸|*d²!:€»Ç[2fD4ÔŠpLý¤lÿ À5hü&Ó¼3Lêk©Àæå %uÌÁ#šÑÅi¿ôOÕÎb…Áðö‚;Zå0ÞùONŽuDò|8Z§\eÖs*s\iõ”õR¤' ˆI#6M{¨­#ÃÊÞGðåj'ÉwÌwm¿¡Í"U8ê¦ÚÁf¼¯k2Õüÿ Y~CE#Ñ?#_ìf·I]šj&¤i¾€`Õ×vô´´4uòíë]#lJØ •6R„°¦¸Î9ŠDa<€_Io ÀÖ½Šÿ ]ÝÆÄ`ØÒ³Ä[7ŠJnýÂŸ•› ÒË ‚¦’	Bç‚¤šõžíwˆxcƒxÛ­‡¯ãœöM±rÙŸÛ·W(t²nqtç|:]m¸ú2âÐè¾ö·—P}>ÀÍ®q a”°*ñ±VÁÓM2Y°éj@
+úø ³±ÅçÈ)ÅbÉšù$¦*½î^¥“UukVð>«#‰®ÙÄ’ÝË†Úô>5£¤¢:L!UƒÓB»Âð±¦j1åò3ÈŒácü˜ê³jœŠ·J¤Î°Î°z²\ž[8i:kkˆÊôLû´Í–`yZrï|tyär Ô•ÓÁdz­¡½Vª#0ÑaÙ\¬nË+Ê²ZjjÚ5}k=¬Ïb8…˜)P×Â‰YM‡”£¢¹ŒíL—×wËwEžŒ¸ë¸•·†³a7\x—Ûi&ÞÝ÷w2ÊRR†ÕåR‰š4L!¦žcµZ0âûÖN¿ku|õµ²6I[÷!7‹e–ÜrØ;Ý ¸óèe–’·œm'¸­ìëÆ€[äúg­—Ð,ëh1Ñ²œ'F¯ÂK!!Hg"éÍ[Ýìñ°B#Únæ½ärw#R6´kâ¿ñÏ÷‰´ ´Öš!é†·Òê9òç×é–ÅÉE?Ó|³(¯Jk…Æ _mIÕˆõ“TÑÑÚ@½í3½ÊPâægCŸ.|ÑD¬±”‘†V4a#Õ®U‘áR	Zæ«†×*µ"Ÿm78ŒMýü<ñHÐîÇxÚm°Š²-ªŒñË£9ùëc
+Ž<“ùÞôò¡øÈ¬{ü£GÖmÝ,©›äJ‚JÜîr HK"áJÊžp•’*‘~rW™ N°ÚB·ÙBR”¦z ô«PdºÅ¹8”Ç•G­ùgG<=–þ‰×Fû±³£ýðô›a§"@j–Y¢qEdŒCQêôùÝj¦¤e_„Ÿ›PjžOÊq¼Þ7ê¾Žâðçd×•æ°•‡é¹*$I>W#¯³ˆe®ž²à¼ƒ.ƒŸ!l|¬“B&Ö¾q«ÀYSBöÜV­y£Æiªw×Ðâ,9q—×F<'6~ßVµóa¨–UÉRÒÅ¯½Î§D‘ú	.*ÌHk&¦Ö¢²MËN1¿r¤‰†Xõ¡aNîõ>Ÿ°¬U).Þn¢µ]Ý cg÷ïÕJp¯Dz'½Ír9©íËˆ­TU÷¨Ù¶áê±š™új\PÌûkXÅƒŸÓZ–VTÓhE-99é
+ºÒÑŒ®¹‹RL‘(æUEt20lÂ2-»iÉ²Y˜þ¥Å“}gIu'!Í/rTõdµ›mS
+MË
+0š»O,ñB:
+~dªBöâºƒ…g°n#“ÔäN«xÙbÚÃ®„§qP×ˆj?+‚f±®D'xˆÂ0oÚÔR R H;ŒÊäg¯ZPJH#q¶ÇãLÖA¥y–lÌÊœV#ª³H×R¡~&Æ¤K©u^k‘^ÒòåÙãÂõèûZÙ±ìé,TÑ%Ç,e<“¦’—jò$>DºòÚ_¬øS¡ «ª¸­‹"ÓN;¡ž¾­õÚ ‘‘[-_&ydÇ ¥ÙK$f°G€l¤E|zÛÉÔ!BòÌ¯‡K4äâ62Žú²Ö…ì#ÞØ¨~FÑ´¬cˆ×²;|Åè²¨YÅ]ÍÔ|¶´m+çVâRçÆ HªGëqù ñ¶TˆFà9±bÁŒ‚b²;­J%´FQey‰ˆ@ˆzŠz€<Ås'ê„À÷k× ¯FB=*µØ¾	¹¹b[gð²Œ‡L5?$Çñ¼†mŽy™–ÚÊü¸¤ôøîGa‘cñÍÚc%Ì¬œÉ3&Hlæt@dZ©6šè{t^MG{â¾~O›]êfs”­EÍŒ‹HF¼%7v¨¥5}åTŒj´P›Ra:¾:¦Ÿ·mHÓþ×À[øËP4Âë&Ssk{‘C8íó|—&¼¶>ªœt˜Çawa^$W.{!ÃÈ;I9Èê÷<“ÐbÂÆ¦ZRÇ8mÙï–žÅ¶È1‘˜ž­©Ì–øíÃcêâ0Ç0d)‘
+|Ù|¡%&2Á ÀÚiŽJ`0©5N¤k¹ëA. Î‘,ºË:ÆTas—c‘ÚDËÌ“5Í%*åEˆµiÓÒWH‘:ÈÓ’Hi§’Ó•Áþ‹fY†C¤±ªê+,­Ã‡äòcÖ› t¯¶‰¥¶c¬ˆ¶¨Vú9/|Ù¤WÄkT"Ô¾ FfœEÂjãêFYo|[ïÈ@¸Õv3WèÓ³#Ú$8Õ5Uag‘LÉnnä+¤H1æÅ”Ä	0üÑ…³œ­¶:Ñ¦QJf°Q1ÎIžb4bâiäÄ!
+G«XÏyöŒG=îkªØÞ¬C³Nß/
+`á<…=å……¹ŒF¤¨dgbu˜"£p&÷H2¸X“¹?D~'áRÙ§³3©øÌI:OQC•<¦IÕ”r[2´AFVúi,³¶C‰$ºXBwËCIˆ²Ï	ä(×[tYq&‹Ï
+TY€W~xrcËNì(üÑˆQ)ôVˆþñ½„F¹8éuÏ5mB®ýÕ[±­å¹>mÚ®à—þU”¯ÿ Î©¹ððÖ3_íâ¶C©rm µƒy29 µ
+1¬¶Ÿ×r#UÈˆ©ì¼ñÕÈ·ñþƒÍÿ u=ÂÝNU×5­¡nÃ@5žíUÆ žÐ/`/æ¨6¯bª5ÊŒUVò¼òŠ‰üJ+¢ÖÓóº=i®Â	 ÐåÓ_Í¦ÆIxÔQ$ú¨ÎEçö%‹'µìz«Uj/³yN¤ËsÈt_Åm0Êˆõv×°mèmrèqc¥é`ÆF6ˆv
+Ì†J÷åDYBrÇB c«O=¸nŒº8±óý>’üËF²G2lÚØdl‹<RL…GÈã#œôç/	Â"'	ÂrX_Fþ"ºy¬ºmqŒd\¾šÂµ_]$žÁ]âWƒ$JË	<Ö¶7Ã"´¯Xò#r¾+TžK1‹^$à¥Õ®ÇÆ*ù¶T²[jáÆÛi×A”¡N¶ËIqI…(! “ S;´÷ä ¬¹f9L‰#]5÷¦£GnóŒs>È/qIöU—r¬XðË‚S
+Pžôíñ‰ÂD{Šï‰¨VªXæ¯jË³iucn˜õž¼¥EÍ$1e³ë/)"ò¢Å&ã,¾I¾B6¸FÒb5^Ô;H©ºQ¸]!Ã5ZÆ|ì‚ ƒ‹)L6ºlaª9A¶@ç¨Ðñ\ÿ PìÔÂb=Q\Ö¯xÿ ZÉIŽil¹ÆCÀ44°â$Æ®tø6’6Â@Üàz‚¤U$³¢"#X05TBgU¶¸æ/ÃØ¦Š`Ï½a{k{jã»…§íÞ/%	,-:Û©©. ¤ ÁJl­ƒØkî?sšì¾–[Ãû•»~ï;—.<¡ÝCA Tâ•©NC™#6øum–ÖµúGM1¤²¿™êoˆ5Y_MþYO­Uñ±FÅEîá=ú‡íë 57ã¶ÊÚ©(j6»YqêÄcÑÂíƒ¡™ø^öñíùž×/·?¯ëÓk»ÐFÑÜ{*tìŠ>G®Ú‚†ÒLC´àÆ+ä¢÷@Žär žÖ¹Z½­Eå=þ}
+ßË…“ñbÛ•ý¼¤b$Mv´±™!êŒ¡Z‹*\ƒ½QW°aLW"*µ­¼qÒT*èžÌ‡_‰YLŽ?-ŽS;ððÚ%Œ…¿©d\	H¤…=Ñ¬…Ìr'–||ùXÜå9|9-%¾‘N²&mZ-UÜhQÈŽ´¨¸´f¾=E³aZS×Åå…%{m5Øì+‰Ï±&»SlåcÎ³ÃßUa>DvŸxà©³„(l,Ð1Æ‰Æ¼¯@Nh±ž`ñNÄ ÕÔ^î%,£Ç¸Àt×îÇÜ–<«jìòÄ&=2+ U¾“ÊÎ@¢JZÒ™‘«(ÑœiŒ7)EcŸªX«ÄÏÑÍBD’dµ{´Â­²'ž½#-ÆCK%µ6JTQÙ¹Í“f§1£öÇñ¦:®bX|ÁÇôSU«iëa6;E¥ŽŒØÈ¶©<Ä–IÂ9fÙÍ$—QžçŒÒçAdŽþâ¾í¬,üL™la¸¶ñ!çËÊ@Â¢šSXåžI"´JBKltyãG®›ä‘nYªÒEÓÍ,{HH"ðP­DhƒX§uŒÏPØ¦ºQ"ÆDˆ Ã–^ó¬èÏˆQO.*KöN×Õ,ŒJN“SR÷åk*Ê†=„‹¬êÛAâÍƒ«@¶!l™é!ÏÇ+”ÙÖ^¨Õþ˜ªQ]Ûÿ U	Âw*'<ÿ HŸ$çŸãÇBÝyç±%=þ–ÄCXE+=4µiÖü8Ú×<ƒÊ_•EWœçâ,‡ý¿yÿ ½ìüžÏ(üLÁ¢·=4Ûvw›HÉfØ^?—p+Hký|[;´›0´¨wåuíŸ0#G“\IöðÜÛÉñŽ'|´¿nZ‡˜ËÌÁe.v—&9‘Hª‚\‹IjÆüª1¤Îûø¨Ïý2Å–f}à^ÉÖ*âX°¥–YnîµÈ²OkûÏo—ùÞÇÛ•N}½Oø'Ï„éž´ÊwþtJkJ´BdJ]jv–&4É9 Ÿ&R· 0'L<vâ²â¢†$€©-bÌ‚â·ÊÓ^ƒÞj)Ç“ãxÖAg“Q\â¦üUuŽÃ¦ºÁë1!‹ZyîÊE"¦þö¸-¼­Dôç:D'wšÂiL¨:ØìtÖá°Ü6Ú1%TÍÓMV¬—SçÅ#«äaŠ9alˆÒ‡!¾EFrç½ÿ •OGÆy£’Âøí¶±X¿#©ó1™U€j¦,üvÏ šS·Ô_ŠT«h×ŠŒ‚rÕ~xA¥AÊ-³w1 6Uƒám¨RG»ª91iíï¥Ué6·Ù’°C-„ó×âÃ`a	CvCžŸ´¥x@ÓDG 'jü™ð”b‡|±ol,á}›ðãé9
+òwñ0+)Ëô¶©$j­Cd§\ÆVS‰ðú&;ËÇ†ý§]	$êjÕ˜Niõ±¼^,˜•!“"XÅ.|«)y- ÈçË˜÷œˆ‚Œ1ç9¬Uî!ò9uåÓÜ®Ë4ÆbßÛbw8TÙ$€˜ýò,¢ 
+?šs•UÆx£Œ±ÖDi–TÈÈ$]q]ltÊo~–ç$Ù†î1ÜržÓ!Èo¶Ë®´´T4uòí®®î-4Ë%…YQQU^¬í,f1 WÂåÌ”aGŒŒc¹’h»¶©{+­v­¹J»ñâ,ˆZª0&(Ô±eã &•©Þ<MB³ó\ßÍ×WÅtª$£Á–%òF›À²aÈgæ¸é$c,ˆÄF>¢9Áäc|À0û†á’ãizM’Ïm®HüÎöÉµµ4á™7.–¦Ž"Âª€6VE¯…"!Ž3Ì3È÷žQ#FÓšt#rLÌŽQ´I™ü)Ds$é¤ußôŠç9£{ñÑIØÎß÷ êÂª$º‰:1©&$|§s	˜ãÆ¨©Ê/åEþÿ ~œCW5™îd¬›e[“¨²""Ê•i6¦W²CÕ9yãHÎU}øj'<ñòã‹«ÿ ‘n„²2ûg{ÿ ÒM–èB/)Q“óÏ?úçyóþ?¶÷þþ?Aü_o»ÙFOgþýÞµN+]GË# ä¦Ë·rYÒ¢Š`Vn—j=Ti#A(jüaŽ4C’9˜)#Wˆª#4DUÖƒ:ÖMàŸOo+ô¿i:íƒ^aMdFõ×² —ÉÝ"b˜ÚÉQí‡bxÆYž+ëÈÛí/HòU’ñ™ušPãtØ…–LŽ*Œfö«¨Š#Ã!ÄZÏ3åY}‰É%ÈiŽÄ6bÈ³AþsäÜü¹üeyÏ>9ósÇ>ü|¹÷ëÌ—ÃaP;·šxnuiiXã]ã]’ >¢¤Æ¾¼ôè+šNE·½àåv’n/öí¹)òŠâšD½Ô³Ïzò«Üüu]Ï*¿_o¢'	ÔšüöÓ¹,â¢yæq·{Â0(¸¶à¢ÍÎrÏ)ñ0^ßõ2zå»Èñø8Ì‰ö’9ªƒW.Å©c>@«Õq”kx/ò-ÐöFOÿ lïñºu1MÆðÕÇCo–†«F2–†UØfT¢™“Y‰†­[)^\Ã ³	d†õSX7•ðbD„Ò½4Nâu"’FòG! 1¸ÒSN¼¹zhuzë¶Õ•%aïôÖ–®žÖnKsX3Â?ºìiã è¦²ãVÉ‚Ès}]L°¢Q†R:"0Ñ<‘‹†±Ó¬’Ê¨pâj^Jù"54²X’M˜Œä‰O=¤0ËŽÜÔ¤eÈlæ×d3†FË¦txÎª©©‹I4ˆäÝÒ×dUS©n#úÊë  fLpiFv<R£2£HÄ3‚Tc
+H6%aŽé¡¬ÛŽ“ÓÚF¸®§¼‹.%Üœ†8Eše­­¬¤–Ç›î¶Û6‚!M‘Nc#±Š6»§ÒW¥Úy«*Û6Ç×K¶É™s<F6	ŒÊmM\ÒÄJü~8{(£
+Pƒ*SsJ–Ù³FwÆQÈØ±LK;¤µ,Ü—Sms
+çÄ4hµ1šJQ
+Cä!8³+›ç•&4v¶"1‰)…˜hþ¡ÑÐ:ŒM¶é,Úªx´·!¬§ƒrì—ÄV>|Ë2%‹’Ád…Ÿ8ÒJ9„$r¼q<rDŽŒÞp½3ÄpX?‡>9-scuitsÈ£i­$I š?!^ïÚé+Ë%Æ"ã(­û¥ÒétQK¥Â~Ÿùùÿ Ïß¥Òè¢¾G÷	Sõ	¿úOê—¿\¡mþ!Ô0{û¼ZY¯„íîùzzˆŒEö÷N;¿_¢ñòêè¯j*9ä­r/TTTTÿ ‚¯Êp¿¯Q±¶/…&Ó6‰«â×ªcÎAE•c£v[¨bÉi»2 ã\óTÜb­ë!ÂR)½w z©9F¹½iòí¯û2ì{åMÀÜQiÄÿ l|pß½„ØÙ]aÖ˜žç›§1Û‹œNÉû+R1kNåÛ+\EÕ”<Ëa	.Qb˜uÕæ#‚]2¦ƒ8}Ó¯\‡ µ!}ÆPÐJ©mR¤µ2@’Žž~¿ªªªý?_ìN—_Ô^QõNz]r]^×ÿÙZimage/jpegO…bplist00ÔfgX$versionX$objectsY$archiverT$top † ¯"()012JKLMNOPQRSTUVWXYZ[\`aU$nullÝ	
+ !R$6S$10R$2R$7R$3S$11R$8V$classR$4R$9R$0R$5R$1€€€ €€€€ €Ó#$%&[NS.relativeWNS.base€€€ _9http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/preview.jpgÒ*+,-Z$classnameX$classesUNSURL¢./UNSURLXNSObject#A³¬Ž·_¢ÈÓ3456@WNS.keysZNS.objects€©789:;<=>?€	€
+€€€€€€€©ABCDEFGHI€€€€€€€€€VServer]Accept-RangesZConnection\Content-TypeTDate]Last-Modified^Content-LengthTEtagZKeep-Alive_YApache/2.2.6 (FreeBSD) mod_ssl/2.2.6 OpenSSL/0.9.7e-p1 DAV/2 PHP/5.2.4 with Suhosin-PatchUbytesZKeep-AliveZimage/jpeg_Fri, 17 Jun 2011 22:53:50 GMT_Fri, 11 Mar 2011 16:03:47 GMTU17839_"1d1c05-45af-1b677ec0"_timeout=5, max=100Ò*+]^_NSMutableDictionary£]_/\NSDictionaryE¯Ò*+bc_NSHTTPURLResponse£de/_NSHTTPURLResponse]NSURLResponse_NSKeyedArchiverÑhi_WebResourceResponse€    # - 2 7 X ^ y | € ƒ † ‰   — š    £ ¦ ¨ ª ¬ ® ° ² ´ ¶ ¸ º ¼ ¾ Å Ñ Ù Û Ý ß +4:=CLUW^fqs}ƒ…‡‰‹™›Ÿ¡£¥§©«²ÀËØÝëúÿ
+flw‚¢ÂÈáöû"%*>BVdvy             j              ‘_9http://www.rotman-baycrest.on.ca/~jimmy/NIfTI/preview.jpgÔO¾           ¨     (       @                              ÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿýü÷ ÿÿÿ ÿÿÿ þÿÿ ÿÿÿ ÿÿÿ ÿÿÿ ÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÞÂ3ÿãËXÿîáŸÿýü÷ ÿÿÿ ÿÿÿ þÿÿ ÿÿÿ ÿÿÿ ÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÂ3ÿÞÃ5ÿäÌWÿòè´ÿÿÿÿ ÿÿÿ ÿÿÿ ÿÿÿ ÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÁ*ÿÛ½ ÿé×}ÿÿþþ ÿÿÿ ÿÿÿ ÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÚ¼ÿëÚˆÿÿÿÿ ÿÿÿ ÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿæÑgÿèÔtÿèÔtÿèÔtÿèÔtÿèÔsÿèÔtÿèÔtÿèÔtÿçÔsÿÛ¾%ÿÛ½#ÿÛ½#ÿÜ¾#ÿÜÀ(ÿÝÂ0ÿÞÃ4ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ1ÿÜ¾$ÿõîÈÿÿÿÿ ÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿû÷âÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿþþüÿùôÜÿîßšÿàÆCÿÜ¾%ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÜ¾$ÿæÑhÿÿÿÿ ÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüùîÿæÒlÿÜ¾$ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÁ0ÿßÃ9ÿûøêÌÝÂ2ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿþþþÿäÍZÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÂ2ÿÜÀ,ÿöðÏÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿûøíÿú÷çÿû÷èÿú÷çÿûøêÿÿÿÿÿÿÿÿÿþÿþÿÿÿÿÿÿÿÿÿÿÿÿÿõíÆÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿'ÿõíÂÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿåÐgÿÝÁ.ÿßÄ9ÿÞÃ9ÿÞÄ8ÿãÊQÿõìÃÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüûôÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÜ¿&ÿõíÀÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿåÏ`ÿÛ¿$ÿÝÂ/ÿÝÂ0ÿÝÂ/ÿÛ¾#ÿßÄ<ÿûúïÿÿÿÿÿÿÿÿÿÿÿÿÿþÿÿÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùóØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿåÏbÿÜÀ(ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÁ+ÿÝÀ,ÿúöåÿÿÿÿÿÿÿÿÿÿÿÿÿþþýÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿãÌWÿÙ»ÿÜ¿%ÿÛ¾%ÿÜ¾&ÿÞÁ1ÿîß™ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿøóÛÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿóêºÿðã¡ÿðå¥ÿðä¥ÿôíÇÿþÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿýýûÿäÍ[ÿÜ¿)ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿþþÿöîËÿâËTÿÜ¿%ÿÞÃ4ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿþþþÿòè¶ÿãÌTÿÜ¿&ÿÞÃ1ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿíß˜ÿÜ¿&ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿõîÉÿòè¶ÿóê¹ÿóé¸ÿõíÆÿûøéÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿèÖyÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿãÌWÿÙ»ÿÜ¿%ÿÛ¾%ÿÜ¾&ÿÞÁ1ÿîß™ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿøóÛÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùóØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿåÏbÿÜÀ(ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÁ+ÿÝÀ,ÿúöåÿÿÿÿÿÿÿÿÿÿÿÿÿþþýÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿåÏ`ÿÛ¿$ÿÝÂ/ÿÝÂ0ÿÝÂ/ÿÛ¾#ÿßÄ<ÿûúïÿÿÿÿÿÿÿÿÿÿÿÿÿþÿÿÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿&ÿõíÁÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿåÐgÿÝÁ.ÿßÄ9ÿÞÃ9ÿÞÄ8ÿãÊQÿõìÃÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüûôÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÜ¿&ÿõíÀÿÞÂ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ4ÿÞÃ3ÿÜ¾$ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿûøíÿú÷çÿû÷èÿú÷çÿûøêÿÿÿÿÿÿÿÿÿþÿþÿÿÿÿÿÿÿÿÿÿÿÿÿõíÆÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÜ¿'ÿõíÂÿãËXÿÞÂ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿþþþÿäÍZÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÂ2ÿÜÀ,ÿöðÏÿîáŸÿÞÃ5ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿùôØÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüùîÿæÒlÿÜ¾$ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÁ0ÿßÃ9ÿõíÁÿÞÃ3 äÌWÿÝÁ*ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿû÷âÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿþþüÿùôÜÿîßšÿàÆCÿÜ¾%ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿõíÁÿÞÃ3 òè´ÿÛ½ ÿÞÃ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿæÑgÿèÔtÿèÔtÿèÔtÿèÔtÿèÔsÿèÔtÿèÔtÿèÔtÿçÔsÿÛ¾%ÿÛ½#ÿÛ½#ÿÜ¾#ÿÜÀ(ÿÝÂ0ÿÞÃ4ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿõíÁÿÞÃ3 ÞÃ3 é×}ÿÚ¼ÿÝÂ1ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿõíÁÿÞÃ3 ÞÃ3 ÞÃ3 ëÚˆÿÜ¾$ÿÜ¾$ÿÝÁ0ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÝÂ2ÿÞÃ3ÿõíÀÿÞÃ3 ÞÃ3 ÞÃ3 ÞÃ3 õîÈÿæÑhÿßÃ9ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿõíÂÿÞÃ3 ÞÃ3 ÞÃ3 ÞÃ3 ÞÃ3 ÞÃ3 ûøêÌÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÞÂ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ2ÿÞÂ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿÞÃ3ÿöðÏÿ      ?                                                                                          €   €   À   à   ð   þ   \image/x-iconObplist00Ô56X$versionX$objectsY$archiverT$top † «%&-./01U$nullÛ	
+R$6R$2R$7R$3R$8V$classR$4R$9R$0R$5R$1€€€€€
+€€	€ Ó !"#$[NS.relativeWNS.base€€€ _,http://www.rotman-baycrest.on.ca/favicon.icoÒ'()*Z$classnameX$classesUNSURL¢+,UNSURLXNSObject#A³¬$`\image/x-iconP#ïÿÿÿÿÿÿÒ'(23]NSURLResponse¢4,]NSURLResponse_NSKeyedArchiverÑ78_WebResourceResponse€    # - 2 7 C I ` c f i l o v y |  ‚ … ‡ ‰ ‹   ‘ “ • — ™ › ¢ ® ¶ ¸ º ¼ ë ð û
+%23<AOR`ru‹             9              _,http://www.rotman-baycrest.on.ca/favicon.ico            1   <   S   q   ƒ   ™   ¨   ©   ¯  ¶Ä  ¶Î  ¶ÿ  ·  ·  ·!  üÔ  üß h ¤ ­ o | Ÿ                          Î
