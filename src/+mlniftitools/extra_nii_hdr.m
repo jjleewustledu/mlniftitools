@@ -9,7 +9,9 @@
 %  - Jimmy Shen (jimmy@rotman-baycrest.on.ca)
 %
 function hdr = extra_nii_hdr(hdr)
-
+   
+   import mlniftitools.*;
+   
    switch hdr.dime.datatype
    case 1
       extra.NIFTI_DATATYPES = 'DT_BINARY';

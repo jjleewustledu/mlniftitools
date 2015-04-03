@@ -14,6 +14,8 @@
 
 function xhair = rri_xhair(varargin)
 
+   import mlniftitools.*;
+   
    if nargin == 0
       error('Please enter a point position as first argument');
       return;

@@ -212,6 +212,8 @@
 %
 function status = view_nii(varargin)
 
+   import mlniftitools.*;
+   
    if nargin < 1
       error('Please check inputs using ''help view_nii''');
    end;
@@ -602,8 +604,7 @@ function status = view_nii(varargin)
       if axi,
          if isfield(nii_view.handles,'axial_bg') & ~isempty(nii_view.handles.axial_bg) & nii_view.useinterp
             Saxi = squeeze(nii_view.bgimg(:,:,nii_view.slices.axi));
-            if ~strcmp(class(Saxi),'uint8'), Saxi = double(Saxi); end;
-            set(nii_view.handles.axial_bg,'CData',Saxi');
+            set(nii_view.handles.axial_bg,'CData',double(Saxi)');
          end
 
          if isfield(nii_view.handles,'axial_image'),
@@ -615,8 +616,7 @@ function status = view_nii(varargin)
                Saxi = Saxi';
             end
 
-            if ~strcmp(class(Saxi),'uint8'), Saxi = double(Saxi); end;
-            set(nii_view.handles.axial_image,'CData',Saxi);
+            set(nii_view.handles.axial_image,'CData',double(Saxi));
          end
 
          if isfield(nii_view.handles,'axial_slider'),
@@ -627,8 +627,7 @@ function status = view_nii(varargin)
        if cor,
          if isfield(nii_view.handles,'coronal_bg') & ~isempty(nii_view.handles.coronal_bg) & nii_view.useinterp
             Scor = squeeze(nii_view.bgimg(:,nii_view.slices.cor,:));
-            if ~strcmp(class(Scor),'uint8'), Scor = double(Scor); end;
-            set(nii_view.handles.coronal_bg,'CData',Scor');
+            set(nii_view.handles.coronal_bg,'CData',double(Scor)');
          end
 
          if isfield(nii_view.handles,'coronal_image'),
@@ -640,8 +639,7 @@ function status = view_nii(varargin)
                Scor = Scor';
             end
 
-            if ~strcmp(class(Scor),'uint8'), Scor = double(Scor); end;
-            set(nii_view.handles.coronal_image,'CData',Scor);
+            set(nii_view.handles.coronal_image,'CData',double(Scor));
          end
 
          if isfield(nii_view.handles,'coronal_slider'),
@@ -653,8 +651,7 @@ function status = view_nii(varargin)
       if sag,
          if isfield(nii_view.handles,'sagittal_bg') & ~isempty(nii_view.handles.sagittal_bg) & nii_view.useinterp
             Ssag = squeeze(nii_view.bgimg(nii_view.slices.sag,:,:));
-            if ~strcmp(class(Ssag),'uint8'), Ssag = double(Ssag); end;
-            set(nii_view.handles.sagittal_bg,'CData',Ssag');
+            set(nii_view.handles.sagittal_bg,'CData',double(Ssag)');
          end
 
          if isfield(nii_view.handles,'sagittal_image'),
@@ -666,8 +663,7 @@ function status = view_nii(varargin)
                Ssag = Ssag';
             end
 
-            if ~strcmp(class(Ssag),'uint8'), Ssag = double(Ssag); end;
-            set(nii_view.handles.sagittal_image,'CData',Ssag);
+            set(nii_view.handles.sagittal_image,'CData',double(Ssag));
          end
 
          if isfield(nii_view.handles,'sagittal_slider'),
@@ -701,8 +697,7 @@ function status = view_nii(varargin)
       if axi,
          if isfield(nii_view.handles,'axial_bg') & ~isempty(nii_view.handles.axial_bg) & nii_view.useinterp
             Saxi = squeeze(nii_view.bgimg(:,:,nii_view.slices.axi));
-            if ~strcmp(class(Saxi),'uint8'), Saxi = double(Saxi); end;
-            set(nii_view.handles.axial_bg,'CData',Saxi');
+            set(nii_view.handles.axial_bg,'CData',double(Saxi)');
          end
 
          if isfield(nii_view.handles,'axial_image'),
@@ -714,8 +709,7 @@ function status = view_nii(varargin)
                Saxi = Saxi';
             end
 
-            if ~strcmp(class(Saxi),'uint8'), Saxi = double(Saxi); end;
-            set(nii_view.handles.axial_image,'CData',Saxi);
+            set(nii_view.handles.axial_image,'CData',double(Saxi));
          end
 
          if isfield(nii_view.handles,'axial_slider'),
@@ -726,8 +720,7 @@ function status = view_nii(varargin)
       if cor,
          if isfield(nii_view.handles,'coronal_bg') & ~isempty(nii_view.handles.coronal_bg) & nii_view.useinterp
             Scor = squeeze(nii_view.bgimg(:,nii_view.slices.cor,:));
-            if ~strcmp(class(Scor),'uint8'), Scor = double(Scor); end;
-            set(nii_view.handles.coronal_bg,'CData',Scor');
+            set(nii_view.handles.coronal_bg,'CData',double(Scor)');
          end
 
          if isfield(nii_view.handles,'coronal_image'),
@@ -739,8 +732,7 @@ function status = view_nii(varargin)
                Scor = Scor';
             end
 
-            if ~strcmp(class(Scor),'uint8'), Scor = double(Scor); end;
-            set(nii_view.handles.coronal_image,'CData',Scor);
+            set(nii_view.handles.coronal_image,'CData',double(Scor));
          end
 
          if isfield(nii_view.handles,'coronal_slider'),
@@ -752,8 +744,7 @@ function status = view_nii(varargin)
       if sag,
          if isfield(nii_view.handles,'sagittal_bg') & ~isempty(nii_view.handles.sagittal_bg) & nii_view.useinterp
             Ssag = squeeze(nii_view.bgimg(nii_view.slices.sag,:,:));
-            if ~strcmp(class(Ssag),'uint8'), Ssag = double(Ssag); end;
-            set(nii_view.handles.sagittal_bg,'CData',Ssag');
+            set(nii_view.handles.sagittal_bg,'CData',double(Ssag)');
          end
 
          if isfield(nii_view.handles,'sagittal_image'),
@@ -765,8 +756,7 @@ function status = view_nii(varargin)
                Ssag = Ssag';
             end
 
-            if ~strcmp(class(Ssag),'uint8'), Ssag = double(Ssag); end;
-            set(nii_view.handles.sagittal_image,'CData',Ssag);
+            set(nii_view.handles.sagittal_image,'CData',double(Ssag));
          end
 
          if isfield(nii_view.handles,'sagittal_slider'),
@@ -825,8 +815,7 @@ function status = view_nii(varargin)
 
       if isfield(nii_view.handles,'axial_bg') & ~isempty(nii_view.handles.axial_bg) & nii_view.useinterp
          Saxi = squeeze(nii_view.bgimg(:,:,nii_view.slices.axi));
-         if ~strcmp(class(Saxi),'uint8'), Saxi = double(Saxi); end;
-         set(nii_view.handles.axial_bg,'CData',Saxi');
+         set(nii_view.handles.axial_bg,'CData',double(Saxi)');
       end
 
       if isfield(nii_view.handles,'axial_image'),
@@ -838,8 +827,7 @@ function status = view_nii(varargin)
             Saxi = Saxi';
          end
 
-         if ~strcmp(class(Saxi),'uint8'), Saxi = double(Saxi); end;
-         set(nii_view.handles.axial_image,'CData',Saxi);
+         set(nii_view.handles.axial_image,'CData',double(Saxi));
       end
 
       if isfield(nii_view.handles,'axial_slider'),
@@ -848,8 +836,7 @@ function status = view_nii(varargin)
 
       if isfield(nii_view.handles,'coronal_bg') & ~isempty(nii_view.handles.coronal_bg) & nii_view.useinterp
          Scor = squeeze(nii_view.bgimg(:,nii_view.slices.cor,:));
-         if ~strcmp(class(Scor),'uint8'), Scor = double(Scor); end;
-         set(nii_view.handles.coronal_bg,'CData',Scor');
+         set(nii_view.handles.coronal_bg,'CData',double(Scor)');
       end
 
       if isfield(nii_view.handles,'coronal_image'),
@@ -861,8 +848,7 @@ function status = view_nii(varargin)
             Scor = Scor';
          end
 
-         if ~strcmp(class(Scor),'uint8'), Scor = double(Scor); end;
-         set(nii_view.handles.coronal_image,'CData',Scor);
+         set(nii_view.handles.coronal_image,'CData',double(Scor));
       end
 
       if isfield(nii_view.handles,'coronal_slider'),
@@ -872,8 +858,7 @@ function status = view_nii(varargin)
 
       if isfield(nii_view.handles,'sagittal_bg') & ~isempty(nii_view.handles.sagittal_bg) & nii_view.useinterp
          Ssag = squeeze(nii_view.bgimg(nii_view.slices.sag,:,:));
-         if ~strcmp(class(Ssag),'uint8'), Ssag = double(Ssag); end;
-         set(nii_view.handles.sagittal_bg,'CData',Ssag');
+         set(nii_view.handles.sagittal_bg,'CData',double(Ssag)');
       end
 
       if isfield(nii_view.handles,'sagittal_image'),
@@ -885,8 +870,7 @@ function status = view_nii(varargin)
             Ssag = Ssag';
          end
 
-         if ~strcmp(class(Ssag),'uint8'), Ssag = double(Ssag); end;
-         set(nii_view.handles.sagittal_image,'CData',Ssag);
+         set(nii_view.handles.sagittal_image,'CData',double(Ssag));
       end
 
       if isfield(nii_view.handles,'sagittal_slider'),
@@ -1024,6 +1008,8 @@ function fig = init(nii, fig, area, setunit, setviewpoint, setscanid, buttondown
          useinterp, setvalue, glblocminmax, setcrosshaircolor, ...
          setcomplex)
 
+   import mlniftitools.*;
+   
    %  Support data type COMPLEX64 & COMPLEX128
    %
    if nii.hdr.dime.datatype == 32 | nii.hdr.dime.datatype == 1792
@@ -1104,10 +1090,12 @@ function fig = init(nii, fig, area, setunit, setviewpoint, setscanid, buttondown
       minvalue = glblocminmax(1);
       maxvalue = glblocminmax(2);
    else
-      minvalue = double(min(nii.img(:,:,:,setscanid)));
-      minvalue = min(minvalue(:));
-      maxvalue = double(max(nii.img(:,:,:,setscanid)));
-      maxvalue = max(maxvalue(:));
+      minvalue = nii.img(:,:,:,setscanid);
+      minvalue = double(minvalue(:));
+      minvalue = min(minvalue(~isnan(minvalue)));
+      maxvalue = nii.img(:,:,:,setscanid);
+      maxvalue = double(maxvalue(:));
+      maxvalue = max(maxvalue(~isnan(maxvalue)));
    end
 
    if ~isempty(setvalue)
@@ -1123,11 +1111,12 @@ function fig = init(nii, fig, area, setunit, setviewpoint, setscanid, buttondown
       minbg = double(min(bgimg(:)));
       maxbg = double(max(bgimg(:)));
 
-      bgimg = scale_in(bgimg, minbg, maxbg, 54) + 200;	% scale to 202~256 (level 201 is used for highcolor part tolerance)
+      bgimg = scale_in(bgimg, minbg, maxbg, 55) + 200;	% scale to 201~256
 
-      %  55 level for brain structure (paded 0 for highcolor level 1, i.e. normal level 201, to make 56 highcolor)
+      %  56 level for brain structure
       %
-      highcolor = [zeros(1,3);gray(55)];
+%      highcolor = [zeros(1,3);gray(55)];
+      highcolor = gray(56);
       cbarminmax = [minvalue maxvalue];
 
       if useinterp
@@ -1137,23 +1126,33 @@ function fig = init(nii, fig, area, setunit, setviewpoint, setscanid, buttondown
          nii.img = repmat(nan, size(nii.img));
          nii.img(setvalue.idx) = setvalue.val;
 
-         %  199 level for source image (map highest color to 199 instead of 200, give 1 level of tolerance)
+         %  200 level for source image
          %
-         bgimg = single(scale_out(bgimg, cbarminmax(1), cbarminmax(2), 198));
+         bgimg = single(scale_out(bgimg, cbarminmax(1), cbarminmax(2), 199));
       else
 
+         bgimg(setvalue.idx) = NaN;
+         minbg = double(min(bgimg(:)));
+         maxbg = double(max(bgimg(:)));
+         bgimg(setvalue.idx) = minbg;
+
+         %  bgimg must be normalized to [201 256]
+         %
+         bgimg = 55 * (bgimg-min(bgimg(:))) / (max(bgimg(:))-min(bgimg(:))) + 201;
          bgimg(setvalue.idx) = 0;
 
          %  scale signal data to 1~200
          %
          nii.img = zeros(size(nii.img));
-         nii.img(setvalue.idx) = scale_in(setvalue.val, minvalue, maxvalue, 198);
+         nii.img(setvalue.idx) = scale_in(setvalue.val, minvalue, maxvalue, 199);
          nii.img = nii.img + bgimg;
          bgimg = [];
-         nii.img = scale_out(nii.img, cbarminmax(1), cbarminmax(2), 198);
+         nii.img = scale_out(nii.img, cbarminmax(1), cbarminmax(2), 199);
 
-         minvalue = double(min(nii.img(:)));
-         maxvalue = double(max(nii.img(:)));
+         minvalue = double(nii.img(:));
+         minvalue = min(minvalue(~isnan(minvalue)));
+         maxvalue = double(nii.img(:));
+         maxvalue = max(maxvalue(~isnan(maxvalue)));
 
          if ~isempty(glblocminmax)		% maxvalue is gray
             minvalue = glblocminmax(1);
@@ -2025,6 +2024,7 @@ end
 
    if nii_view.numscan > 1
       set(handles.Tcontrast, 'string', 'Scan ID:');
+      set(handles.contrast, 'TooltipString', 'Change Scan ID');
    elseif colorindex < 2 | colorindex > 3
       set(handles.Tcontrast, 'visible', 'off');
    end
@@ -2355,6 +2355,8 @@ end
 %----------------------------------------------------------------
 function fig = update_img(img, fig, opt)
 
+   import mlniftitools.*;
+   
    nii_menu = getappdata(fig,'nii_menu');
 
    if ~isempty(nii_menu)
@@ -2389,10 +2391,12 @@ function fig = update_img(img, fig, opt)
       minvalue = opt.glblocminmax(1);
       maxvalue = opt.glblocminmax(2);
    else
-      minvalue = double(min(img(:,:,:,setscanid)));
-      minvalue = min(minvalue(:));
-      maxvalue = double(max(img(:,:,:,setscanid)));
-      maxvalue = max(maxvalue(:));
+      minvalue = img(:,:,:,setscanid);
+      minvalue = double(minvalue(:));
+      minvalue = min(minvalue(~isnan(minvalue)));
+      maxvalue = img(:,:,:,setscanid);
+      maxvalue = double(maxvalue(:));
+      maxvalue = max(maxvalue(~isnan(maxvalue)));
    end
 
    if isfield(opt, 'setvalue')
@@ -2406,10 +2410,11 @@ function fig = update_img(img, fig, opt)
          maxvalue = double(max(setvalue.val));
       end
 
-      bgimg = img;
-      minbg = min(bgimg(:));
-      maxbg = max(bgimg(:));
-      bgimg = scale_in(bgimg, minbg, maxbg, 54) + 200;	% scale to 202~256 (201 is used for highcolor part tolerance)
+      bgimg = double(img);
+      minbg = double(min(bgimg(:)));
+      maxbg = double(max(bgimg(:)));
+
+      bgimg = scale_in(bgimg, minbg, maxbg, 55) + 200;	% scale to 201~256
 
       cbarminmax = [minvalue maxvalue];
 
@@ -2420,21 +2425,29 @@ function fig = update_img(img, fig, opt)
          img = repmat(nan, size(img));
          img(setvalue.idx) = setvalue.val;
 
-         %  199 level for source image (map highest color to 199 instead of 200, give 1 level of tolerance)
+         %  200 level for source image
          %
-         bgimg = single(scale_out(bgimg, cbarminmax(1), cbarminmax(2), 198));
+         bgimg = single(scale_out(bgimg, cbarminmax(1), cbarminmax(2), 199));
 
       else
 
+         bgimg(setvalue.idx) = NaN;
+         minbg = double(min(bgimg(:)));
+         maxbg = double(max(bgimg(:)));
+         bgimg(setvalue.idx) = minbg;
+
+         %  bgimg must be normalized to [201 256]
+         %
+         bgimg = 55 * (bgimg-min(bgimg(:))) / (max(bgimg(:))-min(bgimg(:))) + 201;
          bgimg(setvalue.idx) = 0;
 
          %  scale signal data to 1~200
          %
          img = zeros(size(img));
-         img(setvalue.idx) = scale_in(setvalue.val, minvalue, maxvalue, 198);
+         img(setvalue.idx) = scale_in(setvalue.val, minvalue, maxvalue, 199);
          img = img + bgimg;
          bgimg = [];
-         img = scale_out(img, cbarminmax(1), cbarminmax(2), 198);
+         img = scale_out(img, cbarminmax(1), cbarminmax(2), 199);
 
          minvalue = double(min(img(:)));
          maxvalue = double(max(img(:)));
@@ -2447,6 +2460,7 @@ function fig = update_img(img, fig, opt)
 
       nii_view.bgimg = bgimg;
       nii_view.setvalue = setvalue;
+
    else
       cbarminmax = [minvalue maxvalue];
    end
@@ -2483,8 +2497,7 @@ function fig = update_img(img, fig, opt)
       Saxi = squeeze(nii_view.bgimg(:,:,nii_view.slices.axi));
 
       if isfield(nii_view.handles,'axial_bg') & ~isempty(nii_view.handles.axial_bg)
-         if ~strcmp(class(Saxi),'uint8'), Saxi = double(Saxi); end;
-         set(nii_view.handles.axial_bg,'CData',Saxi');
+         set(nii_view.handles.axial_bg,'CData',double(Saxi)');
       else
          axes(nii_view.handles.axial_axes);
 
@@ -2511,8 +2524,7 @@ function fig = update_img(img, fig, opt)
          Saxi = Saxi';
       end
 
-      if ~strcmp(class(Saxi),'uint8'), Saxi = double(Saxi); end;
-      set(nii_view.handles.axial_image,'CData',Saxi);
+      set(nii_view.handles.axial_image,'CData',double(Saxi));
    end
 
    set(nii_view.handles.axial_axes,'CLim',clim);
@@ -2521,8 +2533,7 @@ function fig = update_img(img, fig, opt)
       Scor = squeeze(nii_view.bgimg(:,nii_view.slices.cor,:));
 
       if isfield(nii_view.handles,'coronal_bg') & ~isempty(nii_view.handles.coronal_bg)
-         if ~strcmp(class(Scor),'uint8'), Scor = double(Scor); end;
-         set(nii_view.handles.coronal_bg,'CData',Scor');
+         set(nii_view.handles.coronal_bg,'CData',double(Scor)');
       else
          axes(nii_view.handles.coronal_axes);
 
@@ -2548,8 +2559,7 @@ function fig = update_img(img, fig, opt)
          Scor = Scor';
       end
 
-      if ~strcmp(class(Scor),'uint8'), Scor = double(Scor); end;
-      set(nii_view.handles.coronal_image,'CData',Scor);
+      set(nii_view.handles.coronal_image,'CData',double(Scor));
    end
 
    set(nii_view.handles.coronal_axes,'CLim',clim);
@@ -2558,8 +2568,7 @@ function fig = update_img(img, fig, opt)
       Ssag = squeeze(nii_view.bgimg(nii_view.slices.sag,:,:));
 
       if isfield(nii_view.handles,'sagittal_bg') & ~isempty(nii_view.handles.sagittal_bg)
-         if ~strcmp(class(Ssag),'uint8'), Ssag = double(Ssag); end;
-         set(nii_view.handles.sagittal_bg,'CData',Ssag');
+         set(nii_view.handles.sagittal_bg,'CData',double(Ssag)');
       else
          axes(nii_view.handles.sagittal_axes);
 
@@ -2585,8 +2594,7 @@ function fig = update_img(img, fig, opt)
          Ssag = Ssag';
       end
 
-      if ~strcmp(class(Ssag),'uint8'), Ssag = double(Ssag); end;
-      set(nii_view.handles.sagittal_image,'CData',Ssag);
+      set(nii_view.handles.sagittal_image,'CData',double(Ssag));
    end
 
    set(nii_view.handles.sagittal_axes,'CLim',clim);
@@ -2630,6 +2638,8 @@ function fig = update_img(img, fig, opt)
 function [top_pos, front_pos, side_pos] = ...
 			axes_pos(fig,area,vol_size,usestretch)
 
+   import mlniftitools.*;
+   
    set(fig,'unit','pixel');
 
    fig_pos = get(fig,'position');
@@ -2675,6 +2685,8 @@ function [top_pos, front_pos, side_pos] = ...
 function [top_ax, front_ax, side_ax] ...
 		= create_ax(fig, area, vol_size, usestretch)
 
+   import mlniftitools.*;
+   
    cur_fig = gcf;			% save h_wait fig
    figure(fig);
 
@@ -2705,6 +2717,8 @@ function [top_ax, front_ax, side_ax] ...
 %----------------------------------------------------------------
 function [cbar_axes, cbarminmax_axes] = create_cbar_axes(fig, cbar_area, nii_view)
 
+   import mlniftitools.*;
+   
    if isempty(cbar_area)		% without_cbar
       cbar_axes = [];
       cbarminmax_axes = [];
@@ -2738,6 +2752,8 @@ function h1 = plot_view(fig, x, y, img_ax, img_slice, clim, ...
 	cbarminmax, handles, useimagesc, colorindex, color_map, ...
 	colorlevel, highcolor, useinterp, numscan)
 
+   import mlniftitools.*;
+   
    h1 = [];
 
    if x > 1 & y > 1,
@@ -2790,8 +2806,7 @@ function h1 = plot_view(fig, x, y, img_ax, img_slice, clim, ...
             h1 = nii_view.handles.sagittal_image;
          end
 
-         if ~strcmp(class(img_slice),'uint8'), img_slice = double(img_slice); end;
-         set(h1, 'cdata', img_slice);
+         set(h1, 'cdata', double(img_slice));
          set(h1, 'xdata', 1:size(img_slice,2));
          set(h1, 'ydata', 1:size(img_slice,1));
 
@@ -2810,7 +2825,9 @@ function h1 = plot_view(fig, x, y, img_ax, img_slice, clim, ...
 function h1 = plot_cbar(fig, cbar_axes, cbarminmax_axes, cbarminmax, ...
 	level, handles, useimagesc, colorindex, color_map, ...
 	colorlevel, highcolor, niiclass, numscan, nii_view)
-
+   
+   import mlniftitools.*;
+   
    cbar_image = [1:level]';
 
    %  In a uint8 or uint16 indexed image, 0 points to the first row 
@@ -2858,8 +2875,7 @@ function h1 = plot_cbar(fig, cbar_axes, cbarminmax_axes, cbarminmax, ...
 
    else
       h1 = nii_view.handles.cbar_image;
-      if ~strcmp(class(cbar_image),'uint8'), cbar_image = double(cbar_image); end;
-      set(h1, 'cdata', cbar_image);
+      set(h1, 'cdata', double(cbar_image));
    end
 
    set(cbar_axes,'YDir','normal','XLimMode','manual', ...
@@ -2871,7 +2887,9 @@ function h1 = plot_cbar(fig, cbar_axes, cbarminmax_axes, cbarminmax, ...
 
 %----------------------------------------------------------------
 function set_coordinates(nii_view,useinterp)
-
+    
+	import mlniftitools.*;
+   
     imgPlim.vox = nii_view.dims;
     imgNlim.vox = [1 1 1];
 
@@ -2903,7 +2921,9 @@ function set_coordinates(nii_view,useinterp)
 
 %----------------------------------------------------------------
 function set_image_value(nii_view),
-
+   
+    import mlniftitools.*;
+   
     %  get coordinates of selected voxel and the image intensity there
     %
     sag = round(nii_view.slices.sag);
@@ -2981,7 +3001,9 @@ function set_image_value(nii_view),
 
 %----------------------------------------------------------------
 function nii_view = get_slice_position(nii_view,view),
-
+    
+	import mlniftitools.*;
+   
     %  obtain slices that is in correct unit, then update slices
     %
     slices = nii_view.slices;
@@ -3012,7 +3034,9 @@ function nii_view = get_slice_position(nii_view,view),
 
 %----------------------------------------------------------------
 function nii_view = get_slider_position(nii_view),
-
+    
+	import mlniftitools.*;
+   
     [nii_view.slices.sag,nii_view.slices.cor,nii_view.slices.axi] = deal(0);
     
     if isfield(nii_view.handles,'sagittal_slider'),
@@ -3044,7 +3068,9 @@ function nii_view = get_slider_position(nii_view),
 
 %----------------------------------------------------------------
 function nii_view = update_imgXYZ(nii_view),
-
+   
+   import mlniftitools.*;
+   
    nii_view.imgXYZ.vox = ...
 	[nii_view.slices.sag,nii_view.slices.cor,nii_view.slices.axi];
    nii_view.imgXYZ.mm = ...
@@ -3056,7 +3082,9 @@ function nii_view = update_imgXYZ(nii_view),
 
 %----------------------------------------------------------------
 function nii_view = convert2voxel(nii_view,slices),
-
+    
+	import mlniftitools.*;
+   
     if get(nii_view.handles.coord,'value') == 1,
 
         %  [slices.axi, slices.cor, slices.sag] are in vox
@@ -3098,7 +3126,9 @@ function nii_view = convert2voxel(nii_view,slices),
 
 %----------------------------------------------------------------
 function nii_view = check_slices(nii_view),
-
+    
+	import mlniftitools.*;
+   
     img = nii_view.nii.img;
     
     [ SagSize, CorSize, AxiSize, TimeSize ] = size(img);
@@ -3119,7 +3149,9 @@ function nii_view = check_slices(nii_view),
 %  keep this function small, since it will be called for every click
 %
 function nii_view = update_nii_view(nii_view)
-
+   
+   import mlniftitools.*;
+   
    %  add imgXYZ into nii_view struct
    %
    nii_view = check_slices(nii_view);
@@ -3148,7 +3180,9 @@ function nii_view = update_nii_view(nii_view)
 
 %----------------------------------------------------------------
 function hist_plot(fig)
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(fig,'nii_view');
 
    if isfield(nii_view, 'disp')
@@ -3178,7 +3212,9 @@ function hist_plot(fig)
 
 %----------------------------------------------------------------
 function hist_eq(fig)
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(fig,'nii_view');
 
    old_pointer = get(fig,'Pointer');
@@ -3206,23 +3242,20 @@ function hist_eq(fig)
    %
    img_slice = squeeze(double(nii_view.disp(:,:,nii_view.slices.axi)));
    h1 = nii_view.handles.axial_image;
-   if ~strcmp(class(img_slice),'uint8'), img_slice = double(img_slice); end;
-   set(h1, 'cdata', img_slice');
+   set(h1, 'cdata', double(img_slice)');
 
    %  update coronal view
    %
    img_slice = squeeze(double(nii_view.disp(:,nii_view.slices.cor,:)));
    h1 = nii_view.handles.coronal_image;
-   if ~strcmp(class(img_slice),'uint8'), img_slice = double(img_slice); end;
-   set(h1, 'cdata', img_slice');
+   set(h1, 'cdata', double(img_slice)');
 
    %  update sagittal view
    %
    img_slice = squeeze(double(nii_view.disp(nii_view.slices.sag,:,:)));
 
    h1 = nii_view.handles.sagittal_image;
-   if ~strcmp(class(img_slice),'uint8'), img_slice = double(img_slice); end;
-   set(h1, 'cdata', img_slice');
+   set(h1, 'cdata', double(img_slice)');
 
    %  remove disp field if un-check 'histeq' button
    %
@@ -3240,7 +3273,9 @@ function hist_eq(fig)
 %----------------------------------------------------------------
 function [top1_label, top2_label, side1_label, side2_label] = ...
 		dir_label(fig, top_ax, front_ax, side_ax)
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(fig,'nii_view');
 
    top_pos = get(top_ax,'position');
@@ -3259,25 +3294,25 @@ function [top1_label, top2_label, side1_label, side2_label] = ...
 
    if isempty(nii_view)
       axes(top_ax);
-      top1_label = text(top1_label_pos(1),top1_label_pos(2), ...
+      top1_label = text(double(top1_label_pos(1)),double(top1_label_pos(2)), ...
 	'== X =>', ...
 	'vertical', 'bottom', ...
 	'unit', 'normal', 'fontsize', 8);
 
       axes(top_ax);
-      top2_label = text(top2_label_pos(1),top2_label_pos(2), ...
+      top2_label = text(double(top2_label_pos(1)),double(top2_label_pos(2)), ...
 	'== Y =>', ...
 	'rotation', 90, 'vertical', 'top', ...
 	'unit', 'normal', 'fontsize', 8);
 
       axes(side_ax);
-      side1_label = text(side1_label_pos(1),side1_label_pos(2), ...
+      side1_label = text(double(side1_label_pos(1)),double(side1_label_pos(2)), ...
 	'<= Y ==', ...
 	'horizontal', 'right', 'vertical', 'top', ...
 	'unit', 'normal', 'fontsize', 8);
 
       axes(side_ax);
-      side2_label = text(side2_label_pos(1),side2_label_pos(2), ...
+      side2_label = text(double(side2_label_pos(1)),double(side2_label_pos(2)), ...
 	'== Z =>', ...
 	'rotation', 90, 'vertical', 'bottom', ...
 	'unit', 'normal', 'fontsize', 8);
@@ -3298,7 +3333,9 @@ function [top1_label, top2_label, side1_label, side2_label] = ...
 
 %----------------------------------------------------------------
 function update_enable(h, opt);
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(h,'nii_view');
    handles = nii_view.handles;
 
@@ -3459,7 +3496,9 @@ function update_enable(h, opt);
 
 %----------------------------------------------------------------
 function update_usepanel(fig, usepanel)
-
+   
+   import mlniftitools.*;
+   
    if isempty(usepanel)
       return;
    end
@@ -3497,7 +3536,9 @@ function update_usepanel(fig, usepanel)
 
 %----------------------------------------------------------------
 function update_usecrosshair(fig, usecrosshair)
-
+   
+   import mlniftitools.*;
+   
    if isempty(usecrosshair)
       return;
    end
@@ -3519,7 +3560,9 @@ function update_usecrosshair(fig, usecrosshair)
 
 %----------------------------------------------------------------
 function update_usestretch(fig, usestretch)
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(fig,'nii_view');
 
    handles = nii_view.handles;
@@ -3839,7 +3882,9 @@ end
 
 %----------------------------------------------------------------
 function update_useinterp(fig, useinterp)
-
+   
+   import mlniftitools.*;
+   
    if isempty(useinterp)
       return;
    end
@@ -4018,7 +4063,9 @@ function update_useinterp(fig, useinterp)
 
 %----------------------------------------------------------------
 function update_useimagesc(fig, useimagesc)
-
+   
+   import mlniftitools.*;
+   
    if isempty(useimagesc)
       return;
    end
@@ -4045,7 +4092,9 @@ function update_useimagesc(fig, useimagesc)
 
 %----------------------------------------------------------------
 function update_shape(fig, area, usecolorbar, usestretch, useimagesc)
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(fig,'nii_view');
 
    if isempty(usestretch)		% no change, get usestretch
@@ -4189,7 +4238,9 @@ end
 
 %----------------------------------------------------------------
 function update_unit(fig, setunit)
-
+   
+   import mlniftitools.*;
+   
    if isempty(setunit)
       return;
    end
@@ -4213,7 +4264,9 @@ function update_unit(fig, setunit)
 
 %----------------------------------------------------------------
 function update_viewpoint(fig, setviewpoint)
-
+   
+   import mlniftitools.*;
+   
    if isempty(setviewpoint)
       return;
    end
@@ -4241,7 +4294,9 @@ function update_viewpoint(fig, setviewpoint)
 
 %----------------------------------------------------------------
 function update_scanid(fig, setscanid)
-
+   
+   import mlniftitools.*;
+   
    if isempty(setscanid)
       return;
    end
@@ -4269,7 +4324,9 @@ function update_scanid(fig, setscanid)
 
 %----------------------------------------------------------------
 function update_crosshaircolor(fig, new_color)
-
+   
+   import mlniftitools.*;
+   
    if isempty(new_color)
       return;
    end
@@ -4290,7 +4347,9 @@ function update_crosshaircolor(fig, new_color)
 
 %----------------------------------------------------------------
 function update_colorindex(fig, colorindex)
-
+   
+   import mlniftitools.*;
+   
    if isempty(colorindex)
       return;
    end
@@ -4308,7 +4367,9 @@ function update_colorindex(fig, colorindex)
 
 %----------------------------------------------------------------
 function redraw_cbar(fig, colorlevel, color_map, highcolor)
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(fig,'nii_view');
 
    if isempty(nii_view.cbar_area)
@@ -4368,7 +4429,9 @@ function redraw_cbar(fig, colorlevel, color_map, highcolor)
 
 %----------------------------------------------------------------
 function update_buttondown(fig, setbuttondown)
-
+   
+   import mlniftitools.*;
+   
    if isempty(setbuttondown)
       return;
    end
@@ -4382,7 +4445,9 @@ function update_buttondown(fig, setbuttondown)
 
 %----------------------------------------------------------------
 function update_cbarminmax(fig, cbarminmax)
-
+   
+   import mlniftitools.*;
+   
    if isempty(cbarminmax)
       return;
    end
@@ -4421,7 +4486,9 @@ function update_cbarminmax(fig, cbarminmax)
 
 %----------------------------------------------------------------
 function update_highcolor(fig, highcolor, colorlevel)
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(fig,'nii_view');
 
    if ischar(highcolor) & (isempty(colorlevel) | nii_view.colorindex == 1)
@@ -4460,7 +4527,9 @@ function update_highcolor(fig, highcolor, colorlevel)
 
 %----------------------------------------------------------------
 function update_colormap(fig, color_map)
-
+   
+   import mlniftitools.*;
+   
    if ischar(color_map)
       return;
    end
@@ -4507,7 +4576,9 @@ function update_colormap(fig, color_map)
 
 %----------------------------------------------------------------
 function status = get_status(h);
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(h,'nii_view');
 
    status.fig = h;
@@ -4579,7 +4650,9 @@ function status = get_status(h);
 %----------------------------------------------------------------
 function [custom_color_map, colorindex] ...
 		 = change_colormap(fig, nii, colorindex, cbarminmax)
-
+   
+   import mlniftitools.*;
+   
    custom_color_map = [];
 
    if ~exist('nii', 'var')
@@ -4708,7 +4781,9 @@ function [custom_color_map, colorindex] ...
 
 %----------------------------------------------------------------
 function move_cursor(fig)
-
+   
+   import mlniftitools.*;
+   
    nii_view = getappdata(fig, 'nii_view');
 
    if isempty(nii_view)
@@ -4837,6 +4912,8 @@ function move_cursor(fig)
 %----------------------------------------------------------------
 function change_scan(hdl_str)
 
+   import mlniftitools.*;
+   
    fig = gcbf;
    nii_view = getappdata(fig,'nii_view');
 
@@ -4858,6 +4935,9 @@ function val = scale_in(val, minval, maxval, range)
 
    %  scale value into range
    %
+   
+   import mlniftitools.*;
+   
    val = range*(double(val)-double(minval))/(double(maxval)-double(minval))+1;
 
    return;					% scale_in
@@ -4870,6 +4950,9 @@ function val = scale_out(val, minval, maxval, range)
    %  scale val back from any thing between 1~256 to a small number that
    %  is corresonding to [minval maxval].
    %
+   
+   import mlniftitools.*;
+	  
    val = (double(val)-1)*(double(maxval)-double(minval))/range+double(minval);
 
    return;					% scale_out

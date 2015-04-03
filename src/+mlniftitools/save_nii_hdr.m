@@ -1,21 +1,11 @@
-%  Save NIFTI dataset header. Support both *.nii and *.hdr/*.img file
-%  extension.
-%  
-%  Usage: save_nii_hdr(hdr, fid)
-%  
-%  hdr - struct with NIFTI header fields.
-%  
-%  fileprefix - NIFTI file name without extension.
-%  
-%  Part of this file is copied and modified from:
-%  http://www.mathworks.com/matlabcentral/fileexchange/1878-mri-analyze-tools
-%  
-%  NIFTI data format can be found on: http://nifti.nimh.nih.gov
-%  
+%  internal function
+  
 %  - Jimmy Shen (jimmy@rotman-baycrest.on.ca)
-%
+
 function save_nii_hdr(hdr, fid)
    
+   import mlniftitools.*;
+	  
    if ~exist('hdr','var') | ~exist('fid','var')
       error('Usage: save_nii_hdr(hdr, fid)');
    end
@@ -56,6 +46,8 @@ function write_header(hdr, fid)
 	%       struct data_history hist;        /* 148 + 200       */
 	%       };                               /* total= 348 bytes*/
    
+   import mlniftitools.*;
+	  
    header_key(fid, hdr.hk);
    image_dimension(fid, hdr.dime);
    data_history(fid, hdr.hist);
@@ -75,6 +67,8 @@ function write_header(hdr, fid)
 %---------------------------------------------------------------------
 function header_key(fid, hk)
    
+   import mlniftitools.*;
+	  
    fseek(fid,0,'bof');
 
 	%  Original header structures    
@@ -151,6 +145,8 @@ function image_dimension(fid, dime)
 	%       int glmin;                       /* 104 + 4         */
 	%       };                               /* total=108 bytes */
 	
+   import mlniftitools.*;
+   
    fwrite(fid, dime.dim(1:8),        'int16');
    fwrite(fid, dime.intent_p1(1),  'float32');
    fwrite(fid, dime.intent_p2(1),  'float32');
@@ -198,6 +194,8 @@ function data_history(fid, hist)
 	%       char intent_name[16];            /* 180 + 16        */
 	%       char magic[4];   % int smin;     /* 196 + 4         */
 	%       };                               /* total=200 bytes */
+	
+   import mlniftitools.*;	
 	
    % descrip     = sprintf('%-80s', hist.descrip);     % 80 chars from left
    % fwrite(fid, descrip(1:80),    'uchar');

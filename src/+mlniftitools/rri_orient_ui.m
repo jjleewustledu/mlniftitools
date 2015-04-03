@@ -12,6 +12,8 @@
 %
 function orient = rri_orient_ui(varargin)
 
+   import mlniftitools.*;
+   
    if nargin == 0
       init;
       orient_ui_fig = gcf;
@@ -44,6 +46,8 @@ function orient = rri_orient_ui(varargin)
 %----------------------------------------------------------------------
 function init
 
+   import mlniftitools.*;
+   
    save_setting_status = 'on';
    rri_orient_pos = [];
 
@@ -229,6 +233,8 @@ function init
 %----------------------------------------------------------------------
 function click_done
 
+   import mlniftitools.*;
+   
    handles = getappdata(gcf, 'handles');
 
    x_orient = get(handles.x_orient, 'value');

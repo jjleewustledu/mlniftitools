@@ -53,7 +53,9 @@
 %  - Jimmy Shen (jimmy@rotman-baycrest.on.ca)
 %
 function flip_lr(original_fn, flipped_fn, old_RGB, tolerance, preferredForm)
-
+   
+   import mlniftitools.*;
+   
    if ~exist('original_fn','var') | ~exist('flipped_fn','var')
       error('Usage: flip_lr(original_fn, flipped_fn, [old_RGB],[tolerance])');
    end

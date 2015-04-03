@@ -18,7 +18,9 @@
 %  - Jeff Gunter, 26-JUN-06
 %
 function outblock = unxform_nii(nii, inblock)
-  
+   
+   import mlniftitools.*;
+   
    if isempty(nii.hdr.hist.rot_orient)     
       outblock=inblock;
    else

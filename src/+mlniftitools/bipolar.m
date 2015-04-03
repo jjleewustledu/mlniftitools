@@ -17,7 +17,9 @@
 %
 %----------------------------------------------------------------
 function cmap = bipolar(M, lo, hi, contrast)
-
+	
+   import mlniftitools.*;
+   
    if ~exist('contrast','var')
       contrast = 128;
    end

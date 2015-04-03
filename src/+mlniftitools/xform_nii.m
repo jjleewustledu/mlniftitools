@@ -63,6 +63,9 @@ function nii = xform_nii(nii, tolerance, preferredForm)
    %  save a copy of the header as it was loaded.  This is the
    %  header before any sform, qform manipulation is done.
    %
+   
+   import mlniftitools.*;
+	  
    nii.original.hdr = nii.hdr;
 
    if ~exist('tolerance','var') | isempty(tolerance)
@@ -272,6 +275,8 @@ function nii = xform_nii(nii, tolerance, preferredForm)
 %-----------------------------------------------------------------------
 function [hdr, orient] = change_hdr(hdr, tolerance, preferredForm)
 
+   import mlniftitools.*;
+   
    orient = [1 2 3];
    affine_transform = 1;
 
@@ -367,6 +372,7 @@ function [hdr, orient] = change_hdr(hdr, tolerance, preferredForm)
       end
 
       qfac = hdr.dime.pixdim(1);
+      if qfac==0, qfac = 1; end
       i = hdr.dime.pixdim(2);
       j = hdr.dime.pixdim(3);
       k = qfac * hdr.dime.pixdim(4);
@@ -465,12 +471,16 @@ function [hdr, orient] = change_hdr(hdr, tolerance, preferredForm)
       hdr.dime.xyzt_units = char(bitset(hdr.dime.xyzt_units,3,0));
    end
 
+   hdr.dime.pixdim = abs(hdr.dime.pixdim);
+
    return;					% change_hdr
 
 
 %-----------------------------------------------------------------------
 function orient = get_orient(R)
 
+   import mlniftitools.*;
+   
    orient = [];
 
    for i = 1:3
@@ -496,6 +506,8 @@ function orient = get_orient(R)
 %-----------------------------------------------------------------------
 function [space_unit, time_unit] = get_units(hdr)
 
+   import mlniftitools.*;
+   
    switch bitand(hdr.dime.xyzt_units, 7)	% mask with 0x07
    case 1
       space_unit = 1e+3;		% meter, m

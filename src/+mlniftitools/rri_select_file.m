@@ -19,6 +19,8 @@ function [selected_file, selected_path] = rri_select_file(varargin)
 %  -- Modified Dec 2002 by Jimmy Shen, Rotman Research Institute
 %
 
+   import mlniftitools.*;
+   
    if nargin == 0 | ischar(varargin{1}) 	% create rri_select_file figure
 
       dir_name = '';
@@ -119,6 +121,8 @@ function [selected_file, selected_path] = rri_select_file(varargin)
 % --------------------------------------------------------------------
 function Init(fig_title,dir_name),
 
+   import mlniftitools.*;
+   
    StartDirectory = pwd;
    if isempty(StartDirectory),
        StartDirectory = filesep;
@@ -411,6 +415,8 @@ function Init(fig_title,dir_name),
 
 function update_dirlist;
 
+   import mlniftitools.*;
+   
    filter_path = getappdata(gcf,'curr_dir');
    filter_pattern = getappdata(gcf,'FilterPattern');
 
@@ -489,6 +495,8 @@ function update_dirlist;
 
 function EditFilter()
 
+   import mlniftitools.*;
+   
    filter_select = get(gcbo,'value');
    filter_string = getappdata(gcf,'filter_string');
    filter_pattern = filter_string(filter_select,:);
@@ -521,6 +529,8 @@ function EditFilter()
 
 function select_dir()
 
+   import mlniftitools.*;
+   
    listed_dir = get(gcbo,'String');
    selected_dir_idx = get(gcbo,'Value');
    selected_dir = listed_dir{selected_dir_idx};
@@ -562,6 +572,8 @@ function select_dir()
 
 function select_file()
 
+   import mlniftitools.*;
+   
    setappdata(gcf,'ready',1);
    listed_file = get(gcbo,'String');
    selected_file_idx = get(gcbo,'Value');
@@ -587,6 +599,8 @@ function select_file()
 
 function EditSelection()
 
+   import mlniftitools.*;
+   
    filter_string = getappdata(gcf,'filter_string');
    h_select = getappdata(gcf,'h_select');
    selected_file = get(h_select,'string');
@@ -622,6 +636,8 @@ function EditSelection()
 
 function delete_fig()
 
+   import mlniftitools.*;
+   
    try
       load('pls_profile');
       pls_profile = which('pls_profile.mat');

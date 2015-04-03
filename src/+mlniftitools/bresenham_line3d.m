@@ -52,7 +52,9 @@
 %  - Jimmy Shen (jimmy@rotman-baycrest.on.ca)
 %
 function [X,Y,Z] = bresenham_line3d(P1, P2, precision)
-
+	
+   import mlniftitools.*;
+   
    if ~exist('precision','var') | isempty(precision) | round(precision) == 0
       precision = 0;
       P1 = round(P1);

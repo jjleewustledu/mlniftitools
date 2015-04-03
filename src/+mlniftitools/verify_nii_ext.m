@@ -18,7 +18,9 @@
 %  - Jimmy Shen (jimmy@rotman-baycrest.on.ca)
 %
 function [ext, esize_total] = verify_nii_ext(ext)
-
+   
+   import mlniftitools.*;
+   
    if ~isfield(ext, 'section')
       error('Incorrect NIFTI header extension structure.');
    elseif ~isfield(ext, 'num_ext')

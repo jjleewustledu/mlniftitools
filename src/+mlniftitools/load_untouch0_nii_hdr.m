@@ -3,7 +3,9 @@
 %  - Jimmy Shen (jimmy@rotman-baycrest.on.ca)
 
 function hdr = load_nii_hdr(fileprefix, machine)
-
+   
+   import mlniftitools.*;
+   
    fn = sprintf('%s.hdr',fileprefix);
    fid = fopen(fn,'r',machine);
     
@@ -30,6 +32,8 @@ function [ dsr ] = read_header(fid)
 	%       struct data_history hist;        /* 148 + 200       */
 	%       };                               /* total= 348 bytes*/
 
+    import mlniftitools.*;
+   
     dsr.hk   = header_key(fid);
     dsr.dime = image_dimension(fid);
     dsr.hist = data_history(fid);
@@ -40,6 +44,8 @@ function [ dsr ] = read_header(fid)
 %---------------------------------------------------------------------
 function [ hk ] = header_key(fid)
 
+    import mlniftitools.*;
+   
     fseek(fid,0,'bof');
     
 	%  Original header structures	
@@ -116,6 +122,8 @@ function [ dime ] = image_dimension(fid)
 	%       int glmin;                       /* 104 + 4         */
 	%       };                               /* total=108 bytes */
 
+    import mlniftitools.*;
+   
     v6 = version;
     if str2num(v6(1))<6
        directchar = '*char';
@@ -169,7 +177,9 @@ function [ hist ] = data_history(fid)
 	%       int smax;                        /* 192 + 4         */
 	%       int smin;                        /* 196 + 4         */
 	%       };                               /* total=200 bytes */
-
+   
+    import mlniftitools.*;
+   
     v6 = version;
     if str2num(v6(1))<6
        directchar = '*char';

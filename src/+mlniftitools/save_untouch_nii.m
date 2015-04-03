@@ -13,6 +13,8 @@
 %
 function save_untouch_nii(nii, filename)
    
+   import mlniftitools.*;
+	  
    if ~exist('nii','var') | isempty(nii) | ~isfield(nii,'hdr') | ...
 	~isfield(nii,'img') | ~exist('filename','var') | isempty(filename)
 
@@ -31,10 +33,45 @@ function save_untouch_nii(nii, filename)
       filetype = 0;
    end
 
+   v = version;
+
+   %  Check file extension. If .gz, unpack it into temp folder
+   %
+   if length(filename) > 2 & strcmp(filename(end-2:end), '.gz')
+
+      if ~strcmp(filename(end-6:end), '.img.gz') & ...
+	 ~strcmp(filename(end-6:end), '.hdr.gz') & ...
+	 ~strcmp(filename(end-6:end), '.nii.gz')
+
+         error('Please check filename.');
+      end
+
+      if str2num(v(1:3)) < 7.1 | ~usejava('jvm')
+         error('Please use MATLAB 7.1 (with java) and above, or run gunzip outside MATLAB.');
+      else
+         gzFile = 1;
+         filename = filename(1:end-3);
+      end
+   end
+
    [p,f] = fileparts(filename);
    fileprefix = fullfile(p, f);
 
    write_nii(nii, filetype, fileprefix);
+
+   %  gzip output file if requested
+   %
+   if exist('gzFile', 'var')
+      if filetype == 1
+         gzip([fileprefix, '.img']);
+         delete([fileprefix, '.img']);
+         gzip([fileprefix, '.hdr']);
+         delete([fileprefix, '.hdr']);
+      elseif filetype == 2
+         gzip([fileprefix, '.nii']);
+         delete([fileprefix, '.nii']);
+      end;
+   end;
 
 %   %  So earlier versions of SPM can also open it with correct originator
  %  %
@@ -52,6 +89,8 @@ function save_untouch_nii(nii, filename)
 %-----------------------------------------------------------------------------------
 function write_nii(nii, filetype, fileprefix)
 
+   import mlniftitools.*;
+   
    hdr = nii.hdr;
 
    if isfield(nii,'ext') & ~isempty(nii.ext)
@@ -186,7 +225,7 @@ function write_nii(nii, filetype, fileprefix)
    end
 
    if skip_bytes
-      fwrite(fid, ones(1,skip_bytes), 'uint8');
+      fwrite(fid, zeros(1,skip_bytes), 'uint8');
    end
 
    fwrite(fid, nii.img, precision);

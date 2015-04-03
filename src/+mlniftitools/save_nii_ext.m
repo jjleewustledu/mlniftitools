@@ -10,6 +10,8 @@
 %
 function save_nii_ext(ext, fid)
 
+   import mlniftitools.*;
+   
    if ~exist('ext','var') | ~exist('fid','var')
       error('Usage: save_nii_ext(ext, fid)');
    end
@@ -26,6 +28,8 @@ function save_nii_ext(ext, fid)
 %---------------------------------------------------------------------
 function write_ext(ext, fid)
 
+   import mlniftitools.*;
+   
    fwrite(fid, ext.extension, 'uchar');
 
    for i=1:ext.num_ext

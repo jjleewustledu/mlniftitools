@@ -83,6 +83,8 @@
 %
 function [new_img, new_M] = affine(old_img, old_M, new_elem_size, verbose, bg, method)
 
+   import mlniftitools.*;
+   
    if ~exist('old_img','var') | ~exist('old_M','var')
       error('Usage: [new_img new_M] = affine(old_img, old_M, [new_elem_size], [verbose], [bg], [method]);');
    end
@@ -252,6 +254,8 @@ function [new_img, new_M] = affine(old_img, old_M, new_elem_size, verbose, bg, m
 %--------------------------------------------------------------------
 function img_slice = trilinear(img, dim1, dim2, M, bg)
 
+   import mlniftitools.*;
+	
    img_slice = zeros(dim1(1:2));
    TINY = 5e-2;					% tolerance
 
@@ -406,6 +410,8 @@ function img_slice = trilinear(img, dim1, dim2, M, bg)
 %--------------------------------------------------------------------
 function img_slice = nearest_neighbor(img, dim1, dim2, M, bg)
 
+   import mlniftitools.*;
+   
    img_slice = zeros(dim1(1:2));
 
    %  Dimension of transformed 3D volume
@@ -473,7 +479,9 @@ function img_slice = nearest_neighbor(img, dim1, dim2, M, bg)
 
 %--------------------------------------------------------------------
 function img_slice = bresenham(img, dim1, dim2, M, bg)
-
+   
+   import mlniftitools.*;
+   
    img_slice = zeros(dim1(1:2));
 
    %  Dimension of transformed 3D volume

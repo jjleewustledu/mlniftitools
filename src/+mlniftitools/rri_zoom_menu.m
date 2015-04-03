@@ -8,6 +8,8 @@
 %--------------------------------------------------------------------
 function menu_hdl = rri_zoom_menu(fig)
 
+   import mlniftitools.*;
+   
    if isnumeric(fig)
       menu_hdl = uimenu('Parent',fig, ...
    	   'Label','Zoom on', ...

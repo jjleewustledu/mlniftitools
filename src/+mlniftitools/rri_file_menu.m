@@ -12,6 +12,8 @@
 
 function rri_file_menu(action, varargin)
 
+   import mlniftitools.*;
+   
    if isnumeric(action)
       fig = action;
       action = 'init';
@@ -51,6 +53,8 @@ function rri_file_menu(action, varargin)
 %
 function init(fig, no_close)
 
+   import mlniftitools.*;
+   
    %  search for file menu
    %
    h_file = [];
@@ -121,6 +125,8 @@ function init(fig, no_close)
 %
 function copy_fig
 
+   import mlniftitools.*;
+   
    arch = computer;
    if(~strcmpi(arch(1:2),'PC'))
       error('copy to clipboard can only be used under MS Windows');
@@ -138,6 +144,8 @@ function copy_fig
 %
 function export_fig
 
+   import mlniftitools.*;
+   
    curr = pwd;
    if isempty(curr)
       curr = filesep;

@@ -26,6 +26,8 @@
 %-------------------------------------------------------------------------
 function mat_into_hdr(files)
 
+   import mlniftitools.*;
+   
    pn = fileparts(files);
    file_lst = dir(files);
    file_lst = {file_lst.name};
