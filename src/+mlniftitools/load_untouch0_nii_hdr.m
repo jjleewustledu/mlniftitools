@@ -5,6 +5,8 @@
 function hdr = load_nii_hdr(fileprefix, machine)
    
    import mlniftitools.*;
+
+   fileprefix = convertStringsToChars(fileprefix);
    
    fn = sprintf('%s.hdr',fileprefix);
    fid = fopen(fn,'r',machine);

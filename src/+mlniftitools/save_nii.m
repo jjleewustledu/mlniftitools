@@ -51,6 +51,8 @@
 function save_nii(nii, fileprefix, old_RGB)
    
    import mlniftitools.*;
+
+   fileprefix = convertStringsToChars(fileprefix);
 	  
    if ~exist('nii','var') | isempty(nii) | ~isfield(nii,'hdr') | ...
 	~isfield(nii,'img') | ~exist('fileprefix','var') | isempty(fileprefix)
@@ -135,6 +137,8 @@ function save_nii(nii, fileprefix, old_RGB)
 function write_nii(nii, filetype, fileprefix, old_RGB)
 
    import mlniftitools.*;
+
+   fileprefix = convertStringsToChars(fileprefix);
    
    hdr = nii.hdr;
 

@@ -45,6 +45,8 @@ function [hdr, ext, filetype, machine] = load_untouch_header_only(filename)
 
    import mlniftitools.*;
    
+   filename = convertStringsToChars(filename);
+   
    if ~exist('filename','var')
       error('Usage:  [header, ext, filetype, machine] = load_untouch_header_only(filename)');
    end

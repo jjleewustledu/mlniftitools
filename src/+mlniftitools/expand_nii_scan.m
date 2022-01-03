@@ -12,6 +12,8 @@ function expand_nii_scan(filename, img_idx, newpath)
    
    v = version;
 
+   filename = convertStringsToChars(filename);
+
    %  Check file extension. If .gz, unpack it into temp folder
    %
    if length(filename) > 2 & strcmp(filename(end-2:end), '.gz')

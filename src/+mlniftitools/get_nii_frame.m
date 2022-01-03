@@ -20,8 +20,10 @@
 function [ total_scan ] = get_nii_frame(filename)
 	
    import mlniftitools.*;
+
+   filename = convertStringsToChars(filename);
    
-   if ~exist('filename','var'),
+   if ~exist('filename','var')
       error('Usage: [ total_scan ] = get_nii_frame(filename)');
    end
 

@@ -14,6 +14,8 @@
 function save_untouch_nii(nii, filename)
    
    import mlniftitools.*;
+
+   filename = convertStringsToChars(filename);
 	  
    if ~exist('nii','var') | isempty(nii) | ~isfield(nii,'hdr') | ...
 	~isfield(nii,'img') | ~exist('filename','var') | isempty(filename)
@@ -90,6 +92,8 @@ function save_untouch_nii(nii, filename)
 function write_nii(nii, filetype, fileprefix)
 
    import mlniftitools.*;
+
+   fileprefix = convertStringsToChars(fileprefix);
    
    hdr = nii.hdr;
 

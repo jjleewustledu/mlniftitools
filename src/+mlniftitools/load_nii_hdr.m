@@ -6,6 +6,8 @@ function [hdr, filetype, fileprefix, machine] = load_nii_hdr(fileprefix)
 
    import mlniftitools.*;
    
+   fileprefix = convertStringsToChars(fileprefix);
+
    if ~exist('fileprefix','var'),
       error('Usage: [hdr, filetype, fileprefix, machine] = load_nii_hdr(filename)');
    end

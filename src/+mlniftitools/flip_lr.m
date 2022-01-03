@@ -55,6 +55,10 @@
 function flip_lr(original_fn, flipped_fn, old_RGB, tolerance, preferredForm)
    
    import mlniftitools.*;
+
+
+   original_fn = convertStringsToChars(original_fn);
+   flipped_fn = convertStringsToChars(flipped_fn);
    
    if ~exist('original_fn','var') | ~exist('flipped_fn','var')
       error('Usage: flip_lr(original_fn, flipped_fn, [old_RGB],[tolerance])');

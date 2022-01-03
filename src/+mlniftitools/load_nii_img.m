@@ -5,6 +5,8 @@
 function [img,hdr] = load_nii_img(hdr,filetype,fileprefix,machine,img_idx,dim5_idx,dim6_idx,dim7_idx,old_RGB)
 
    import mlniftitools.*;
+
+   fileprefix = convertStringsToChars(fileprefix);
    
    if ~exist('hdr','var') | ~exist('filetype','var') | ~exist('fileprefix','var') | ~exist('machine','var')
       error('Usage: [img,hdr] = load_nii_img(hdr,filetype,fileprefix,machine,[img_idx],[dim5_idx],[dim6_idx],[dim7_idx],[old_RGB]);');
@@ -123,6 +125,8 @@ function [img,hdr] = load_nii_img(hdr,filetype,fileprefix,machine,img_idx,dim5_i
 function [img,hdr] = read_image(hdr,filetype,fileprefix,machine,img_idx,dim5_idx,dim6_idx,dim7_idx,old_RGB)
 
    import mlniftitools.*;
+
+   fileprefix = convertStringsToChars(fileprefix);
    
    switch filetype
    case {0, 1}

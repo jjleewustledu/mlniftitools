@@ -17,6 +17,8 @@ function collapse_nii_scan(scan_pattern, fileprefix, scan_path)
    
    import mlniftitools.*;
    
+   fileprefix = convertStringsToChars(fileprefix);
+
    if ~exist('fileprefix','var')
       fileprefix = 'multi_scan';
    else

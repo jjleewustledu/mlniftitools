@@ -46,6 +46,8 @@
 function save_untouch_slice(slice, filename, slice_idx, img_idx, dim5_idx, dim6_idx, dim7_idx)
    
    import mlniftitools.*;
+
+   filename = convertStringsToChars(filename);
    
    if ~exist('slice','var') | ~isnumeric(slice)
       msg = [char(10) '"slice" argument should be a portion of slices that was loaded' char(10)];
@@ -246,6 +248,8 @@ function save_untouch_slice(slice, filename, slice_idx, img_idx, dim5_idx, dim6_
 function save_untouch_slice_img(slice,hdr,filetype,fileprefix,machine,slice_idx,img_idx,dim5_idx,dim6_idx,dim7_idx)
 
    import mlniftitools.*;
+
+   fileprefix = convertStringsToChars(fileprefix);
    
    if ~exist('hdr','var') | ~exist('filetype','var') | ~exist('fileprefix','var') | ~exist('machine','var')
       error('Usage: save_untouch_slice_img(slice,hdr,filetype,fileprefix,machine,slice_idx,[img_idx],[dim5_idx],[dim6_idx],[dim7_idx]);');
@@ -385,6 +389,8 @@ function save_untouch_slice_img(slice,hdr,filetype,fileprefix,machine,slice_idx,
 function write_image(slice,hdr,filetype,fileprefix,machine,slice_idx,img_idx,dim5_idx,dim6_idx,dim7_idx)
    
    import mlniftitools.*;
+
+   fileprefix = convertStringsToChars(fileprefix);
    
    if filetype == 2
       fid = fopen(sprintf('%s.nii',fileprefix),'r+');

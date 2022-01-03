@@ -20,6 +20,8 @@ function ext = load_nii_ext(filename)
 
    import mlniftitools.*;
    
+   filename = convertStringsToChars(filename);
+
    if ~exist('filename','var'),
       error('Usage: ext = load_nii_ext(filename)');
    end

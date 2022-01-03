@@ -71,6 +71,8 @@ function nii = load_untouch_nii(filename, img_idx, dim5_idx, dim6_idx, dim7_idx,
 			old_RGB, slice_idx)
 
    import mlniftitools.*;
+
+   filename = convertStringsToChars(filename);
    
    if ~exist('filename','var')
       error('Usage: nii = load_untouch_nii(filename, [img_idx], [dim5_idx], [dim6_idx], [dim7_idx], [old_RGB], [slice_idx])');

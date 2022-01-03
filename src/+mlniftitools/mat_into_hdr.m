@@ -27,6 +27,8 @@
 function mat_into_hdr(files)
 
    import mlniftitools.*;
+
+   files = convertStringsToChars(files);
    
    pn = fileparts(files);
    file_lst = dir(files);

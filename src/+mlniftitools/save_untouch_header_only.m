@@ -18,6 +18,8 @@
 function save_untouch_header_only(hdr, filename)
    
    import mlniftitools.*;
+
+   filename = convertStringsToChars(filename);
    
    if ~exist('hdr','var') | isempty(hdr) | ~exist('filename','var') | isempty(filename)
       error('Usage: save_untouch_header_only(hdr, filename)');
@@ -59,8 +61,10 @@ function save_untouch_header_only(hdr, filename)
 %-----------------------------------------------------------------------------------
 function write_hdr(hdr, fileprefix)
 
-   import mlniftitools.*;
-   
+   import mlniftitools.*;   
+
+   fileprefix = convertStringsToChars(fileprefix);
+
    fid = fopen(sprintf('%s.hdr',fileprefix),'w');
 
    if isfield(hdr.hist,'magic')

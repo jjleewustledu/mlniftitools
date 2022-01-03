@@ -60,6 +60,9 @@
 function reslice_nii(old_fn, new_fn, voxel_size, verbose, bg, method, img_idx, preferredForm)
 
    import mlniftitools.*;
+
+   old_fn = convertStringsToChars(old_fn);
+   new_fn = convertStringsToChars(new_fn);
    
    if ~exist('old_fn','var') | ~exist('new_fn','var')
       error('Usage: reslice_nii(old_fn, new_fn, [voxel_size], [verbose], [bg], [method], [img_idx])');
@@ -136,7 +139,9 @@ function reslice_nii(old_fn, new_fn, voxel_size, verbose, bg, method, img_idx, p
 function [nii] = load_nii_no_xform(filename, img_idx, old_RGB, preferredForm)
 
    import mlniftitools.*;
-   
+
+   filename = convertStringsToChars(filename);
+
    if ~exist('filename','var'),
       error('Usage: [nii] = load_nii(filename, [img_idx], [old_RGB])');
    end
