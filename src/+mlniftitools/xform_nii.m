@@ -227,7 +227,7 @@ function nii = xform_nii(nii, tolerance, preferredForm)
          pattern = pattern(:);
 
          if hdr.dime.datatype == 32 | hdr.dime.datatype == 1792 | ...
-		hdr.dime.datatype == 128 | hdr.dime.datatype == 511
+         		hdr.dime.datatype == 128 | hdr.dime.datatype == 511
 
             tmp = reshape(nii.img(:,:,:,1), [prod(new_dim) hdr.dime.dim(5:8)]);
             tmp = tmp(pattern, :);
@@ -250,7 +250,7 @@ function nii = xform_nii(nii, tolerance, preferredForm)
          end
       else
          if hdr.dime.datatype == 32 | hdr.dime.datatype == 1792 | ...
-		hdr.dime.datatype == 128 | hdr.dime.datatype == 511
+         		hdr.dime.datatype == 128 | hdr.dime.datatype == 511
 
             nii.img(:,:,:,1) = permute(nii.img(:,:,:,1), rot_orient);
             nii.img(:,:,:,2) = permute(nii.img(:,:,:,2), rot_orient);

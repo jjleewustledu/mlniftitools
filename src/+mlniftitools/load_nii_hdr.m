@@ -173,13 +173,13 @@ function [ dime ] = image_dimension(fid)
 	%  struct image_dimension
 	%       {                                /* off + size      */
 	%       short int dim[8];                /* 0 + 16          */
-        %       /*
-        %           dim[0]      Number of dimensions in database; usually 4. 
-        %           dim[1]      Image X dimension;  number of *pixels* in an image row. 
-        %           dim[2]      Image Y dimension;  number of *pixel rows* in slice. 
-        %           dim[3]      Volume Z dimension; number of *slices* in a volume. 
-        %           dim[4]      Time points; number of volumes in database
-        %       */
+    %       /*
+    %           dim[0]      Number of dimensions in database; usually 4. 
+    %           dim[1]      Image X dimension;  number of *pixels* in an image row. 
+    %           dim[2]      Image Y dimension;  number of *pixel rows* in slice. 
+    %           dim[3]      Volume Z dimension; number of *slices* in a volume. 
+    %           dim[4]      Time points; number of volumes in database
+    %       */
 	%       float intent_p1;   % char vox_units[4];   /* 16 + 4       */
 	%       float intent_p2;   % char cal_units[8];   /* 20 + 4       */
 	%       float intent_p3;   % char cal_units[8];   /* 24 + 4       */

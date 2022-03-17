@@ -323,7 +323,7 @@ function [img,hdr] = read_image(hdr,filetype,fileprefix,machine,img_idx,dim5_idx
                   %  applied.
                   %
                   pos = sub2ind([d1 d2 d3 d4 d5 d6 d7], 1, 1, 1, ...
-			img_idx(t), dim5_idx(i5),dim6_idx(i6),dim7_idx(i7)) -1;
+          			img_idx(t), dim5_idx(i5),dim6_idx(i6),dim7_idx(i7)) -1;
                   pos = pos * hdr.dime.bitpix/8;
 
                   if filetype == 2
